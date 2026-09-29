@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Board — Nurse2Tech</title>
+  <meta name="description" content="Health tech jobs for nurses: search live openings in informatics, product, UX, implementation and more, or post a role to reach nurses.">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>
+      </symbol>
+      <symbol id="i-brief" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="14" width="38" height="26" rx="3" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M17 14v-3a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M5 25h38M24 22v6" stroke="var(--blue)" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M15 24.5l6 6 12-13" stroke="var(--blue)" stroke-width="3.2"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Nurse2Tech home">
+        <img src="assets/logo.jpg" alt="Nurse2Tech logo" width="1020" height="620">
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html#start">Get started</a>
+        <a href="index.html#roles">Roles</a>
+        <a href="resources.html">Resources</a>
+        <a href="jobs.html" aria-current="page">Jobs</a>
+        <a href="apply.html" class="btn btn-sm">Join the community</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="apply-hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="container">
+        <a href="index.html" class="back"><svg class="ico-sm"><use href="#i-arrow"/></svg> Back to home</a>
+        <p class="eyebrow">Job board</p>
+        <h1>Health tech jobs <span class="accent">for nurses.</span></h1>
+        <p class="lead">Search live openings for the roles nurses move into most, browse jobs we've hand-picked, or post a role to reach clinical talent.</p>
+
+        <form class="job-search" id="job-search" role="search">
+          <label class="job-search-field">
+            <svg><use href="#i-search"/></svg>
+            <input type="search" id="q" placeholder="Job title or keyword, e.g. nurse informaticist" aria-label="Job title or keyword">
+          </label>
+          <label class="job-search-field job-search-loc">
+            <svg><use href="#i-pin"/></svg>
+            <input type="text" id="loc" placeholder="City, state or “Remote”" aria-label="Location">
+          </label>
+          <button type="submit" class="btn">Search jobs</button>
+        </form>
+        <p class="job-search-note">Opens results on LinkedIn Jobs and Indeed in a new tab.</p>
+      </div>
+    </section>
+
+    <!-- QUICK SEARCHES -->
+    <section class="section jobs-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Search by role</p>
+          <h2>Jump straight to <span class="accent">live openings</span></h2>
+          <p class="sub">Each search is tuned for nurse-friendly roles and always shows the latest postings.</p>
+        </div>
+        <label class="switch jobs-remote">
+          <input type="checkbox" id="remote-only">
+          <span class="track"><span class="thumb"></span></span>
+          Remote only
+        </label>
+        <div class="role-searches" id="role-searches"></div>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="section section-tint" id="featured">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Featured jobs</p>
+          <h2>Hand-picked by <span class="accent">Nurse2Tech</span></h2>
+          <p class="sub">Roles we've reviewed that value clinical experience.</p>
+        </div>
+        <div class="filters" id="job-filters">
+          <button class="chip active" data-jfilter="all">All</button>
+          <button class="chip" data-jfilter="informatics">Informatics</button>
+          <button class="chip" data-jfilter="product">Product</button>
+          <button class="chip" data-jfilter="ux">UX</button>
+          <button class="chip" data-jfilter="implementation">Implementation</button>
+          <button class="chip" data-jfilter="success">Clinical success</button>
+          <button class="chip" data-jfilter="ai">Clinical AI</button>
+          <button class="chip" data-jfilter="data">Data</button>
+        </div>
+        <div class="job-list" id="job-list"></div>
+        <div class="job-empty" id="job-empty" hidden>
+          <svg><use href="#i-brief"/></svg>
+          <h3>New featured roles are on the way</h3>
+          <p>In the meantime, use the live searches above, or <a href="apply.html">tell us the role you want</a> and we'll send openings your way.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- POST A JOB -->
+    <section class="section" id="post">
+      <div class="container contact-wrap">
+        <div class="contact-copy">
+          <p class="eyebrow">For employers</p>
+          <h2>Hiring nurses? <span class="accent">Post a role.</span></h2>
+          <p class="sub">Reach nurses who are actively preparing for health tech careers. We review every submission before it's featured. Posting is free.</p>
+          <ul class="checks checks-dark">
+            <li>Reviewed within a few days</li>
+            <li>Shared with the Nurse2Tech community</li>
+            <li>No cost to post</li>
+          </ul>
+        </div>
+        <div>
+          <form class="form" id="post-form" novalidate>
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="row-2">
+              <div class="field">
+                <label for="p-company">Company *</label>
+                <input id="p-company" name="company" type="text" autocomplete="organization" required>
+              </div>
+              <div class="field">
+                <label for="p-title">Job title *</label>
+                <input id="p-title" name="job_title" type="text" required>
+              </div>
+            </div>
+            <div class="row-2">
+              <div class="field">
+                <label for="p-location">Location *</label>
+                <input id="p-location" name="location" type="text" placeholder="City, state or Remote" required>
+              </div>
+              <div class="field">
+                <label for="p-cat">Role type *</label>
+                <select id="p-cat" name="category" required>
+                  <option value="">Select…</option>
+                  <option value="informatics">Clinical Informatics</option>
+                  <option value="product">Product Management</option>
+                  <option value="ux">UX Research / Design</option>
+                  <option value="implementation">Clinical Implementation</option>
+                  <option value="success">Clinical / Customer Success</option>
+                  <option value="ai">Clinical AI / Content</option>
+                  <option value="sales">Sales / Solutions</option>
+                  <option value="data">Data & Analytics</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label">Work setting</span>
+              <div class="seg" role="radiogroup">
+                <label><input type="radio" name="work_setting" value="Remote" checked><span>Remote</span></label>
+                <label><input type="radio" name="work_setting" value="Hybrid"><span>Hybrid</span></label>
+                <label><input type="radio" name="work_setting" value="On-site"><span>On-site</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="p-url">Link to the job posting *</label>
+              <input id="p-url" name="job_url" type="url" placeholder="https://" required>
+            </div>
+            <div class="field">
+              <label for="p-email">Your email *</label>
+              <input id="p-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="p-desc">Short description <span class="opt">(optional)</span></label>
+              <textarea id="p-desc" name="description" rows="3" placeholder="Why is this role a great fit for a nurse?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">Submit job <svg class="ico-sm"><use href="#i-arrow"/></svg></button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+          <div class="success post-success" id="post-success" hidden>
+            <svg class="success-ico"><use href="#i-check"/></svg>
+            <h2>Thanks, <span class="accent">we got it!</span></h2>
+            <p class="sub">We'll review the role and email you once it's featured.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="assets/logo.jpg" alt="Nurse2Tech" class="footer-logo" width="1020" height="620">
+      <div class="tagline"><b></b>Where nursing<br><span>meets innovation.</span></div>
+      <p class="copy">© <span id="year"></span> Nurse2Tech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="jobs.js"></script>
+</body>
+</html>

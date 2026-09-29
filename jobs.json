@@ -1,0 +1,14 @@
+{
+  "_help": "Featured jobs shown on jobs.html. Add one object per job. category must be one of: informatics, product, ux, implementation, success, ai, sales, data. work_setting: Remote, Hybrid or On-site. posted: YYYY-MM-DD.",
+  "_example": {
+    "title": "Clinical Informatics Specialist",
+    "company": "Example Health",
+    "location": "Austin, TX",
+    "work_setting": "Hybrid",
+    "category": "informatics",
+    "url": "https://example.com/careers/123",
+    "posted": "2026-09-29",
+    "description": "One or two sentences about the role."
+  },
+  "jobs": []
+}
