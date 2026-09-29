@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nurse2Tech — Where Nursing Meets Innovation</title>
+  <meta name="description" content="Nurse2Tech helps nurses explore health tech careers: discover real roles, find your skill gaps, reframe your clinical experience, and connect with nurses who've made the move.">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG icon sprite (matches brand icon set) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-people" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="10" r="4.5" stroke="currentColor" stroke-width="2.6"/>
+        <circle cx="10" cy="16" r="3.5" stroke="currentColor" stroke-width="2.6"/>
+        <circle cx="38" cy="16" r="3.5" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M15 38V28a9 9 0 0 1 18 0v10" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M4 38v-7a6 6 0 0 1 8.5-5.5M44 38v-7a6 6 0 0 0-8.5-5.5" stroke="currentColor" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 20a10 10 0 0 1 15-9 10 10 0 0 1 15 9M11 30l13 12 13-12" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M4 24h11l3-6 5 12 4-8 2 2h15" stroke="var(--blue)" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-laptop" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="30" height="21" rx="2.5" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M4 36h40v1.5a2.5 2.5 0 0 1-2.5 2.5h-35A2.5 2.5 0 0 1 4 37.5z" fill="currentColor"/>
+        <path d="M24 14v11M18.5 19.5h11" stroke="var(--blue)" stroke-width="3.2"/>
+      </symbol>
+      <symbol id="i-bulb" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 3v4M11 8l3 3M37 8l-3 3M4 21h4M40 21h4" stroke="var(--blue)" stroke-width="2.6"/>
+        <path d="M18 34c0-4-6-7-6-13a12 12 0 0 1 24 0c0 6-6 9-6 13z" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M19 38h10M21 42h6" stroke="var(--blue)" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-chat" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 10h32a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3H22l-9 7v-7H8a3 3 0 0 1-3-3V13a3 3 0 0 1 3-3z" stroke="currentColor" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Nurse2Tech home">
+        <img src="assets/logo.jpg" alt="Nurse2Tech logo" width="1020" height="620">
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#start">Get started</a>
+        <a href="#roles">Roles</a>
+        <a href="#translate">Your skills</a>
+        <a href="#connect">Connect</a>
+        <a href="apply.html" class="btn btn-sm">Join the community</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">For nurses curious about health tech</p>
+          <h1>Interested in health tech, <span class="accent">but not sure where to begin?</span></h1>
+          <p class="lead">Your clinical experience is more valuable in tech than you think. Nurse2Tech helps you find your path — from bedside to product, informatics, UX, and beyond.</p>
+          <div class="hero-cta">
+            <a href="#start" class="btn">See the 4 ways to start <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+            <a href="apply.html" class="btn btn-ghost">Tell us what role you want</a>
+          </div>
+        </div>
+        <div class="hero-art reveal">
+          <div class="hero-img-wrap">
+            <img src="assets/nurse.jpg" alt="Nurse at a laptop thinking about her next career step" width="420" height="440">
+          </div>
+          <div class="float-card fc-1"><svg><use href="#i-heart"/></svg><span>Clinical insight</span></div>
+          <div class="float-card fc-2"><svg><use href="#i-laptop"/></svg><span>Health tech</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ICON STRIP -->
+    <section class="strip" aria-label="Where nursing meets innovation">
+      <div class="container strip-inner">
+        <svg><use href="#i-people"/></svg><i></i>
+        <svg><use href="#i-heart"/></svg><i></i>
+        <svg><use href="#i-laptop"/></svg><i></i>
+        <svg><use href="#i-bulb"/></svg><i></i>
+        <div class="tagline"><b></b>Where nursing<br><span>meets innovation.</span></div>
+      </div>
+    </section>
+
+    <!-- 4 WAYS -->
+    <section class="section" id="start">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Your roadmap</p>
+          <h2>Here are <span class="accent">4 practical ways</span> to get started</h2>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <span class="num">01</span>
+            <svg class="card-ico"><use href="#i-people"/></svg>
+            <h3>Explore real roles</h3>
+            <p>See where nurses fit in health tech — informatics, product, UX, clinical success, and more.</p>
+            <a href="#roles" class="card-link">Browse roles <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="card reveal">
+            <span class="num">02</span>
+            <svg class="card-ico"><use href="#i-heart"/></svg>
+            <h3>Find your gaps</h3>
+            <p>Compare your skills with real job postings and know exactly what to learn next.</p>
+            <a href="#contact" class="card-link">Get a gap check <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="card reveal">
+            <span class="num">03</span>
+            <svg class="card-ico"><use href="#i-laptop"/></svg>
+            <h3>Reframe your experience</h3>
+            <p>Learn how your clinical skills translate into the language tech teams hire for.</p>
+            <a href="#translate" class="card-link">See the translation <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="card reveal">
+            <span class="num">04</span>
+            <svg class="card-ico"><use href="#i-bulb"/></svg>
+            <h3>Talk to nurses in tech</h3>
+            <p>Learn from nurses who've already made the transition — their paths, pitfalls, and advice.</p>
+            <a href="#connect" class="card-link">Get connected <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+        <div class="callout reveal">
+          <svg class="callout-ico"><use href="#i-chat"/></svg>
+          <div class="callout-text">
+            <strong>Don't know a nurse in the role?</strong>
+            <span>Reach out to Nurse2Tech — we're happy to make the connection.</span>
+          </div>
+          <a href="#contact" class="btn btn-sm">Reach out</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROLES -->
+    <section class="section section-tint" id="roles">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Explore real roles</p>
+          <h2>Where nurses fit <span class="accent">in health tech</span></h2>
+          <p class="sub">A few of the most common paths nurses take. Tap a filter to narrow it down.</p>
+        </div>
+        <div class="filters reveal" role="tablist">
+          <button class="chip active" data-filter="all">All roles</button>
+          <button class="chip" data-filter="clinical">Clinical-facing</button>
+          <button class="chip" data-filter="product">Product & design</button>
+          <button class="chip" data-filter="data">Data & informatics</button>
+        </div>
+        <div class="roles">
+          <article class="role" data-cat="data">
+            <span class="tag">Data & informatics</span>
+            <h3>Clinical Informatics Specialist</h3>
+            <p>Bridge clinicians and EHR systems — optimize workflows, build order sets, and train staff.</p>
+            <ul><li>Workflow design</li><li>EHR (Epic, Cerner)</li><li>Training</li></ul>
+          </article>
+          <article class="role" data-cat="product">
+            <span class="tag">Product & design</span>
+            <h3>Clinical Product Manager</h3>
+            <p>Shape what gets built. Turn frontline problems into product requirements teams can ship.</p>
+            <ul><li>Prioritization</li><li>User stories</li><li>Stakeholders</li></ul>
+          </article>
+          <article class="role" data-cat="product">
+            <span class="tag">Product & design</span>
+            <h3>UX Researcher</h3>
+            <p>Interview clinicians and patients, run usability tests, and make tools actually usable at 3 a.m.</p>
+            <ul><li>Interviewing</li><li>Usability testing</li><li>Synthesis</li></ul>
+          </article>
+          <article class="role" data-cat="clinical">
+            <span class="tag">Clinical-facing</span>
+            <h3>Clinical Implementation Specialist</h3>
+            <p>Roll out new technology at hospitals and clinics, and make sure it sticks with the care team.</p>
+            <ul><li>Change management</li><li>Go-live support</li><li>Education</li></ul>
+          </article>
+          <article class="role" data-cat="clinical">
+            <span class="tag">Clinical-facing</span>
+            <h3>Clinical Success Manager</h3>
+            <p>Partner with health system customers, drive adoption, and bring their feedback to the product team.</p>
+            <ul><li>Relationships</li><li>Adoption metrics</li><li>Advocacy</li></ul>
+          </article>
+          <article class="role" data-cat="data">
+            <span class="tag">Data & informatics</span>
+            <h3>Clinical AI / Content Specialist</h3>
+            <p>Validate clinical logic, review AI outputs for safety, and author evidence-based content.</p>
+            <ul><li>Clinical validation</li><li>Evidence review</li><li>Safety</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSLATE -->
+    <section class="section" id="translate">
+      <div class="container translate-grid">
+        <div class="reveal">
+          <p class="eyebrow">Reframe your experience</p>
+          <h2>You already speak <span class="accent">tech</span>. You just call it something else.</h2>
+          <p class="sub">Hiring managers look for these skills every day. Here's how your bedside experience maps to the job description.</p>
+          <a href="apply.html" class="btn">Help me reframe my resume</a>
+        </div>
+        <div class="translate-list reveal">
+          <div class="tr-row tr-head"><span>At the bedside</span><span></span><span>In health tech</span></div>
+          <div class="tr-row"><span>Patient assessment</span><svg class="ico-sm"><use href="#i-arrow"/></svg><span>User research & needs discovery</span></div>
+          <div class="tr-row"><span>Care plans</span><svg class="ico-sm"><use href="#i-arrow"/></svg><span>Product roadmaps & requirements</span></div>
+          <div class="tr-row"><span>Charge nurse / triage</span><svg class="ico-sm"><use href="#i-arrow"/></svg><span>Prioritization & stakeholder management</span></div>
+          <div class="tr-row"><span>Patient education</span><svg class="ico-sm"><use href="#i-arrow"/></svg><span>Onboarding, training & enablement</span></div>
+          <div class="tr-row"><span>Charting & documentation</span><svg class="ico-sm"><use href="#i-arrow"/></svg><span>Data quality & workflow optimization</span></div>
+          <div class="tr-row"><span>Rapid response</span><svg class="ico-sm"><use href="#i-arrow"/></svg><span>Incident management under pressure</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section class="section section-dark" id="connect">
+      <div class="container connect-grid">
+        <div class="reveal">
+          <p class="eyebrow eyebrow-light">Talk to nurses in tech</p>
+          <h2>Learn from nurses who've <span class="accent-light">already made the move</span></h2>
+          <p class="sub">Real conversations beat endless research. We'll introduce you to a nurse working in the role you're curious about — for a coffee chat, advice, or a resume review.</p>
+          <ul class="checks">
+            <li>1:1 introductions to nurses in health tech</li>
+            <li>Honest insight into day-to-day work</li>
+            <li>Guidance on courses, certifications & portfolios</li>
+          </ul>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><strong>4</strong><span>practical steps to start</span></div>
+          <div class="stat"><strong>6+</strong><span>career paths to explore</span></div>
+          <div class="stat"><strong>1:1</strong><span>connections with nurses in tech</span></div>
+          <div class="stat"><strong>0</strong><span>tech background required</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact-wrap reveal">
+        <div class="contact-copy">
+          <p class="eyebrow">Reach out</p>
+          <h2>Ready to take <span class="accent">your first step?</span></h2>
+          <p class="sub">Tell us a bit about you and what you're curious about. We'll get back to you with next steps — or a connection.</p>
+          <a href="apply.html" class="apply-link">Already know what role you want? <b>Share your profile →</b></a>
+        </div>
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="interest">I'm most interested in</label>
+            <select id="interest" name="interest">
+              <option>Exploring roles</option>
+              <option>Finding my skill gaps</option>
+              <option>Reframing my experience</option>
+              <option>Talking to a nurse in tech</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Anything else? <span class="opt">(optional)</span></label>
+            <textarea id="message" name="message" rows="4" placeholder="e.g. I'm an ICU nurse with 6 years of experience, curious about UX research…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-block">Send message</button>
+          <p class="form-note" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="assets/logo.jpg" alt="Nurse2Tech" class="footer-logo" width="1020" height="620">
+      <div class="tagline"><b></b>Where nursing<br><span>meets innovation.</span></div>
+      <p class="copy">© <span id="year"></span> Nurse2Tech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
