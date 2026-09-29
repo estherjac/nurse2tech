@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources — Nurse2Tech</title>
+  <meta name="description" content="Courses, certifications, free tools and communities to help nurses move into health tech.">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+      </symbol>
+      <symbol id="i-cert" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="19" r="11" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M19 19l3.5 3.5L29 16" stroke="var(--blue)" stroke-width="3"/>
+        <path d="M17 28l-4 14 11-5 11 5-4-14" stroke="currentColor" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 12c-4-3-10-4-18-3v28c8-1 14 0 18 3 4-3 10-4 18-3V9c-8-1-14 0-18 3z" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M24 12v28" stroke="var(--blue)" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-tool" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="30" height="21" rx="2.5" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M4 36h40v1.5a2.5 2.5 0 0 1-2.5 2.5h-35A2.5 2.5 0 0 1 4 37.5z" fill="currentColor"/>
+        <path d="M17 23l5-5 3 3 6-6" stroke="var(--blue)" stroke-width="2.8"/>
+      </symbol>
+      <symbol id="i-people" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="10" r="4.5" stroke="currentColor" stroke-width="2.6"/>
+        <circle cx="10" cy="16" r="3.5" stroke="currentColor" stroke-width="2.6"/>
+        <circle cx="38" cy="16" r="3.5" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M15 38V28a9 9 0 0 1 18 0v10" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M4 38v-7a6 6 0 0 1 8.5-5.5M44 38v-7a6 6 0 0 0-8.5-5.5" stroke="var(--blue)" stroke-width="2.6"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Nurse2Tech home">
+        <img src="assets/logo.jpg" alt="Nurse2Tech logo" width="1020" height="620">
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html#start">Get started</a>
+        <a href="index.html#roles">Roles</a>
+        <a href="resources.html" aria-current="page">Resources</a>
+        <a href="index.html#connect">Connect</a>
+        <a href="apply.html" class="btn btn-sm">Join the community</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="apply-hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="container">
+        <a href="index.html" class="back"><svg class="ico-sm"><use href="#i-arrow"/></svg> Back to home</a>
+        <p class="eyebrow">Resources</p>
+        <h1>Everything you need to <span class="accent">skill up and plug in.</span></h1>
+        <p class="lead">A curated list of courses, certifications, free tools and communities for nurses moving into health tech. Start with what's free, then invest where it counts.</p>
+      </div>
+    </section>
+
+    <section class="res-body">
+      <div class="container">
+        <div class="res-bar">
+          <div class="filters" role="tablist" aria-label="Filter resources">
+            <button class="chip active" data-rfilter="all">All</button>
+            <button class="chip" data-rfilter="cert">Certifications</button>
+            <button class="chip" data-rfilter="course">Courses</button>
+            <button class="chip" data-rfilter="tool">Free tools</button>
+            <button class="chip" data-rfilter="community">Communities</button>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="free-only">
+            <span class="track"><span class="thumb"></span></span>
+            Free only
+          </label>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="res-group" data-group="cert">
+          <div class="res-head">
+            <svg class="res-head-ico"><use href="#i-cert"/></svg>
+            <div>
+              <h2>Certifications</h2>
+              <p>Credentials hiring managers recognize. Check each site for current eligibility and fees.</p>
+            </div>
+          </div>
+          <div class="res-grid">
+            <a class="res" href="https://www.nursingworld.org/our-certifications/informatics-nurse/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Informatics</span><span class="tag tag-paid">Paid</span></div>
+              <h3>Informatics Nursing Certification (ANCC)</h3>
+              <p>The gold-standard credential for nurse informaticists. Requires an active RN license plus informatics practice hours.</p>
+              <span class="res-meta">ANCC · Experienced RNs <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.himss.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Health IT</span><span class="tag tag-paid">Paid</span></div>
+              <h3>CAHIMS</h3>
+              <p>Entry-level health IT certification from HIMSS with no work-experience requirement. A great first credential.</p>
+              <span class="res-meta">HIMSS · Beginner <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.himss.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Health IT</span><span class="tag tag-paid">Paid</span></div>
+              <h3>CPHIMS</h3>
+              <p>The professional-level HIMSS certification for health IT and informatics roles, once you have some experience.</p>
+              <span class="res-meta">HIMSS · Intermediate <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://amia.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Informatics</span><span class="tag tag-paid">Paid</span></div>
+              <h3>AMIA Health Informatics Certification (AHIC)</h3>
+              <p>An interdisciplinary informatics credential from AMIA for professionals with informatics experience.</p>
+              <span class="res-meta">AMIA · Advanced <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.scrumalliance.org/get-certified/product-owner-track/certified-scrum-product-owner" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Product</span><span class="tag tag-paid">Paid</span></div>
+              <h3>Certified Scrum Product Owner (CSPO)</h3>
+              <p>Learn how product teams plan and prioritize work. Useful for clinical product manager roles.</p>
+              <span class="res-meta">Scrum Alliance · Beginner <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.pmi.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Project mgmt</span><span class="tag tag-paid">Paid</span></div>
+              <h3>CAPM / PMP</h3>
+              <p>Project management credentials from PMI. Strong for implementation and program roles.</p>
+              <span class="res-meta">PMI · Beginner → Advanced <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.epic.com/careers/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">EHR</span><span class="tag tag-sponsor">Employer-sponsored</span></div>
+              <h3>Epic certification</h3>
+              <p>Usually sponsored by your hospital or an Epic customer. Raise your hand for super-user or build roles to get there.</p>
+              <span class="res-meta">Epic · Via employer <svg><use href="#i-ext"/></svg></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- COURSES -->
+        <div class="res-group" data-group="course">
+          <div class="res-head">
+            <svg class="res-head-ico"><use href="#i-book"/></svg>
+            <div>
+              <h2>Courses</h2>
+              <p>Build the skills that show up in job postings, at your own pace.</p>
+            </div>
+          </div>
+          <div class="res-grid">
+            <a class="res" href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">UX</span><span class="tag tag-paid">Paid · aid available</span></div>
+              <h3>Google UX Design Certificate</h3>
+              <p>A beginner-friendly program covering research, wireframes and prototypes. You finish with portfolio projects.</p>
+              <span class="res-meta">Coursera · Beginner <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Data</span><span class="tag tag-paid">Paid · aid available</span></div>
+              <h3>Google Data Analytics Certificate</h3>
+              <p>Spreadsheets, SQL, Tableau and R basics, framed around real analysis projects.</p>
+              <span class="res-meta">Coursera · Beginner <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.coursera.org/professional-certificates/google-project-management" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Project mgmt</span><span class="tag tag-paid">Paid · aid available</span></div>
+              <h3>Google Project Management Certificate</h3>
+              <p>Covers Agile and traditional project management. Pairs well with implementation roles.</p>
+              <span class="res-meta">Coursera · Beginner <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.coursera.org/search?query=health%20informatics" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Informatics</span><span class="tag tag-free">Free to audit</span></div>
+              <h3>Health informatics courses</h3>
+              <p>University-led courses on EHRs, clinical data and interoperability. Many can be audited free.</p>
+              <span class="res-meta">Coursera · Beginner <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://amia.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Informatics</span><span class="tag tag-paid">Paid</span></div>
+              <h3>AMIA 10x10 courses</h3>
+              <p>Graduate-level introductions to informatics from partner universities. A solid step before a master's degree.</p>
+              <span class="res-meta">AMIA · Intermediate <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Data</span><span class="tag tag-free">Free</span></div>
+              <h3>Intro to SQL</h3>
+              <p>Learn to query databases in bite-sized, interactive lessons. SQL comes up in almost every data role.</p>
+              <span class="res-meta">Khan Academy · Beginner <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.freecodecamp.org/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Tech basics</span><span class="tag tag-free">Free</span></div>
+              <h3>freeCodeCamp</h3>
+              <p>Free, self-paced lessons in web basics, Python and data analysis. Great for learning the vocabulary.</p>
+              <span class="res-meta">freeCodeCamp · Beginner <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.hl7.org/fhir/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Interoperability</span><span class="tag tag-free">Free</span></div>
+              <h3>HL7 FHIR overview</h3>
+              <p>The standard behind how health apps share data. Knowing the basics sets you apart in interviews.</p>
+              <span class="res-meta">HL7 · Intermediate <svg><use href="#i-ext"/></svg></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="res-group" data-group="tool">
+          <div class="res-head">
+            <svg class="res-head-ico"><use href="#i-tool"/></svg>
+            <div>
+              <h2>Free tools</h2>
+              <p>Tools tech teams use every day. Try them now so they're familiar on day one.</p>
+            </div>
+          </div>
+          <div class="res-grid">
+            <a class="res" href="https://www.figma.com/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Design</span><span class="tag tag-free">Free plan</span></div>
+              <h3>Figma</h3>
+              <p>The standard tool for UX design. Sketch a better version of a screen you use at work for your portfolio.</p>
+              <span class="res-meta">Design & prototyping <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://miro.com/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Collaboration</span><span class="tag tag-free">Free plan</span></div>
+              <h3>Miro</h3>
+              <p>A digital whiteboard for mapping workflows. Try diagramming your unit's admission process.</p>
+              <span class="res-meta">Whiteboarding <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.canva.com/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Portfolio</span><span class="tag tag-free">Free plan</span></div>
+              <h3>Canva</h3>
+              <p>Make a polished one-page portfolio, case study or resume without design experience.</p>
+              <span class="res-meta">Visual design <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://learning.linkedin.com/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Learning</span><span class="tag tag-free">Often free via library</span></div>
+              <h3>LinkedIn Learning</h3>
+              <p>Thousands of short courses. Many public libraries give free access with a library card.</p>
+              <span class="res-meta">Video courses <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.healthit.gov/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Health IT</span><span class="tag tag-free">Free</span></div>
+              <h3>HealthIT.gov</h3>
+              <p>Official U.S. resources on EHRs, interoperability and health IT policy. Useful background for interviews.</p>
+              <span class="res-meta">Reference <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.levels.fyi/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Salary</span><span class="tag tag-free">Free</span></div>
+              <h3>Levels.fyi</h3>
+              <p>See real compensation data for tech roles so you can negotiate with confidence.</p>
+              <span class="res-meta">Salary research <svg><use href="#i-ext"/></svg></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- COMMUNITIES -->
+        <div class="res-group" data-group="community">
+          <div class="res-head">
+            <svg class="res-head-ico"><use href="#i-people"/></svg>
+            <div>
+              <h2>Communities</h2>
+              <p>The fastest way into health tech is through people. Join, listen, then ask.</p>
+            </div>
+          </div>
+          <div class="res-grid">
+            <a class="res res-feature" href="apply.html" data-free>
+              <div class="res-tags"><span class="tag">Nurses in tech</span><span class="tag tag-free">Free</span></div>
+              <h3>Nurse2Tech community</h3>
+              <p>Tell us the role you want. We'll connect you with a nurse who's already doing it.</p>
+              <span class="res-meta">Join now <svg><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="res" href="https://www.ania.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Informatics</span><span class="tag tag-paid">Membership</span></div>
+              <h3>ANIA</h3>
+              <p>The American Nursing Informatics Association: webinars, local chapters and an annual conference.</p>
+              <span class="res-meta">Professional association <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://amia.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Informatics</span><span class="tag tag-paid">Membership</span></div>
+              <h3>AMIA Nursing Informatics Working Group</h3>
+              <p>Connect with nurse informaticists and researchers inside the leading informatics association.</p>
+              <span class="res-meta">Professional association <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.himss.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Health IT</span><span class="tag tag-paid">Membership</span></div>
+              <h3>HIMSS local chapters</h3>
+              <p>Local health IT events are great for meeting hiring managers near you.</p>
+              <span class="res-meta">Professional association <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.sonsiel.org/" target="_blank" rel="noopener">
+              <div class="res-tags"><span class="tag">Innovation</span><span class="tag tag-paid">Membership</span></div>
+              <h3>SONSIEL</h3>
+              <p>The Society of Nurse Scientists, Innovators, Entrepreneurs & Leaders, including nurse-led hackathons.</p>
+              <span class="res-meta">Nurse innovators <svg><use href="#i-ext"/></svg></span>
+            </a>
+            <a class="res" href="https://www.reddit.com/r/healthIT/" target="_blank" rel="noopener" data-free>
+              <div class="res-tags"><span class="tag">Health IT</span><span class="tag tag-free">Free</span></div>
+              <h3>r/healthIT</h3>
+              <p>Candid discussions about health IT jobs, EHR vendors and career moves.</p>
+              <span class="res-meta">Online forum <svg><use href="#i-ext"/></svg></span>
+            </a>
+          </div>
+        </div>
+
+        <p class="res-empty" hidden>No resources match that filter.</p>
+
+        <div class="callout res-callout">
+          <svg class="callout-ico"><use href="#i-people"/></svg>
+          <div class="callout-text">
+            <strong>Not sure which of these fits you?</strong>
+            <span>Tell us the role you're aiming for and we'll recommend where to start.</span>
+          </div>
+          <a href="apply.html" class="btn btn-sm">Get a recommendation</a>
+        </div>
+        <p class="res-note">Links go to external sites. Costs and requirements change, so check each provider for the latest details. Know a great resource? <a href="index.html#contact">Suggest it</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="assets/logo.jpg" alt="Nurse2Tech" class="footer-logo" width="1020" height="620">
+      <div class="tagline"><b></b>Where nursing<br><span>meets innovation.</span></div>
+      <p class="copy">© <span id="year"></span> Nurse2Tech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    {
+      const chips = document.querySelectorAll("[data-rfilter]");
+      const freeOnly = document.getElementById("free-only");
+      const groups = document.querySelectorAll(".res-group");
+      const empty = document.querySelector(".res-empty");
+      let cat = "all";
+
+      function apply() {
+        let shown = 0;
+        groups.forEach((g) => {
+          const catMatch = cat === "all" || g.dataset.group === cat;
+          let visible = 0;
+          g.querySelectorAll(".res").forEach((r) => {
+            const ok = catMatch && (!freeOnly.checked || r.hasAttribute("data-free"));
+            r.hidden = !ok;
+            if (ok) visible++;
+          });
+          g.hidden = visible === 0;
+          shown += visible;
+        });
+        empty.hidden = shown > 0;
+      }
+
+      chips.forEach((c) => c.addEventListener("click", () => { cat = c.dataset.rfilter; apply(); }));
+      freeOnly.addEventListener("change", apply);
+    }
+  </script>
+</body>
+</html>
