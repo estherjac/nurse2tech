@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us — Nurse2Tech</title>
+  <meta name="description" content="Get in touch with Nurse2Tech: questions, partnerships, speaking, or help finding a nurse in the role you want.">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
+      </symbol>
+      <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.8-1.7-2.8-1.72 0-1.98 1.34-1.98 2.72V21h-4z"/>
+      </symbol>
+      <symbol id="i-people" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="10" r="4.5" stroke="currentColor" stroke-width="2.6"/>
+        <circle cx="10" cy="16" r="3.5" stroke="currentColor" stroke-width="2.6"/>
+        <circle cx="38" cy="16" r="3.5" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M15 38V28a9 9 0 0 1 18 0v10" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M4 38v-7a6 6 0 0 1 8.5-5.5M44 38v-7a6 6 0 0 0-8.5-5.5" stroke="currentColor" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M15 24.5l6 6 12-13" stroke="var(--blue)" stroke-width="3.2"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Nurse2Tech home">
+        <img src="assets/logo.jpg" alt="Nurse2Tech logo" width="1020" height="620">
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Main">
+        <a href="about.html">About us</a>
+        <a href="resources.html">Resources</a>
+        <a href="events.html">Events</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="contact.html" aria-current="page">Contact us</a>
+        <a href="apply.html" class="btn btn-sm">Join the community</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="apply-hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow">Contact us</p>
+        <h1>Let's <span class="accent">talk.</span></h1>
+        <p class="lead">Questions, partnerships, speaking invitations, or looking for a nurse in a specific role? We'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="apply-body">
+      <div class="container apply-grid">
+        <div>
+          <form class="form contact-card" id="contact-page-form" data-formsubmit data-subject="Nurse2Tech contact: {topic} from {name}" data-success="#contact-success" novalidate>
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="row-2">
+              <div class="field">
+                <label for="c-name">Name *</label>
+                <input id="c-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="c-email">Email *</label>
+                <input id="c-email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="row-2">
+              <div class="field">
+                <label for="c-who">I am a…</label>
+                <select id="c-who" name="i_am">
+                  <option>Nurse</option>
+                  <option>Nursing student</option>
+                  <option>Employer / recruiter</option>
+                  <option>Partner or sponsor</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-topic">Topic</label>
+                <select id="c-topic" name="topic">
+                  <option>General question</option>
+                  <option>Connect me with a nurse in tech</option>
+                  <option>Partnership</option>
+                  <option>Speaking or events</option>
+                  <option>Hiring nurses</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-msg">Message *</label>
+              <textarea id="c-msg" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">Send message <svg class="ico-sm"><use href="#i-arrow"/></svg></button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+          <div class="success" id="contact-success" hidden>
+            <svg class="success-ico"><use href="#i-check"/></svg>
+            <h2>Message <span class="accent">sent!</span></h2>
+            <p class="sub">Thanks for reaching out. We'll get back to you soon.</p>
+            <a href="index.html" class="btn">Back to home</a>
+          </div>
+        </div>
+
+        <aside class="apply-side">
+          <div class="side-card">
+            <h3>Other ways to reach us</h3>
+            <a class="contact-line" href="mailto:esther.jacob@guardoc.health"><svg><use href="#i-mail"/></svg> esther.jacob@guardoc.health</a>
+            <a class="contact-line" href="https://www.linkedin.com/company/144673004/" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg> Nurse2Tech on LinkedIn</a>
+          </div>
+          <div class="side-card">
+            <svg class="side-ico"><use href="#i-people"/></svg>
+            <h3>Looking for a nurse in a specific role?</h3>
+            <p class="side-text">Share your background and goals, and we'll try to make the connection.</p>
+            <a href="apply.html" class="card-link">Join the community <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="assets/logo.jpg" alt="Nurse2Tech" class="footer-logo" width="1020" height="620">
+      <div class="tagline"><b></b>Where nursing<br><span>meets innovation.</span></div>
+      <p class="copy">© <span id="year"></span> Nurse2Tech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

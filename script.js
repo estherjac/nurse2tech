@@ -72,3 +72,52 @@ form?.addEventListener("submit", (e) => {
 
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
+
+// Generic FormSubmit handler: <form data-formsubmit data-subject="… {field} …" data-success="#id">
+const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.health";
+document.querySelectorAll("form[data-formsubmit]").forEach((f) => {
+  const status = f.querySelector(".form-note");
+  const btn = f.querySelector('button[type="submit"]');
+  const btnHtml = btn.innerHTML;
+  const fail = (msg, el) => {
+    status.style.color = "#e0475b";
+    status.textContent = msg;
+    el?.focus();
+  };
+
+  f.addEventListener("input", (e) => e.target.classList?.remove("invalid"));
+  f.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    let firstBad = null;
+    f.querySelectorAll("[required]").forEach((el) => {
+      const v = el.type === "checkbox" ? (el.checked ? "y" : "") : el.value.trim();
+      const bad = !v || (el.type === "email" && !/^\S+@\S+\.\S+$/.test(v));
+      el.classList.toggle("invalid", bad);
+      if (bad) firstBad ??= el;
+    });
+    if (firstBad) return fail("Please fill in the highlighted fields.", firstBad);
+
+    const data = new FormData(f);
+    const subject = (f.dataset.subject || "New Nurse2Tech message").replace(/\{(\w+)\}/g, (_, k) => data.get(k) || "");
+    data.set("_subject", subject);
+    if (data.get("email")) data.set("_replyto", data.get("email"));
+    data.set("_template", "table");
+    data.set("_captcha", "false");
+
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    status.textContent = "";
+    try {
+      const res = await fetch(FORMSUBMIT_ENDPOINT, { method: "POST", body: data, headers: { Accept: "application/json" } });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || String(json.success) !== "true") throw new Error(json.message || "Submission failed.");
+      f.hidden = true;
+      const ok = document.querySelector(f.dataset.success);
+      if (ok) ok.hidden = false;
+    } catch (err) {
+      fail(`Sorry, something went wrong: ${err.message} Please try again in a moment.`);
+      btn.disabled = false;
+      btn.innerHTML = btnHtml;
+    }
+  });
+});

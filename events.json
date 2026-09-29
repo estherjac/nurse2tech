@@ -1,0 +1,13 @@
+{
+  "_help": "Events shown on events.html. Add one object per event; past events move to the 'Past events' list automatically. date: YYYY-MM-DD. format: Virtual or In person. url: registration link (optional).",
+  "_example": {
+    "title": "Coffee chat: Nurses in product management",
+    "date": "2026-10-20",
+    "time": "6:00 PM ET",
+    "format": "Virtual",
+    "location": "Zoom",
+    "description": "An informal conversation with nurses working as product managers.",
+    "url": "https://example.com/register"
+  },
+  "events": []
+}
