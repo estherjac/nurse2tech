@@ -1,5 +1,5 @@
-// Where contact form submissions go — replace with the real Nurse2Tech inbox.
-const CONTACT_EMAIL = "hello@nurse2tech.com";
+// Where contact form submissions go.
+const CONTACT_EMAIL = "esther.jacob@guardoc.health";
 
 const nav = document.querySelector(".nav");
 const toggle = document.querySelector(".nav-toggle");

@@ -1,6 +1,6 @@
-// Paste your Formspree endpoint here (https://formspree.io → New form → copy the URL).
-// Each submission is emailed to you, with a link to view it in your Formspree dashboard.
-const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+// Submissions are emailed to this address via FormSubmit (https://formsubmit.co).
+// The very first submission triggers a one-time activation email that must be confirmed.
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.health";
 
 // Scoped in a block so names don't clash with script.js
 {
@@ -57,15 +57,17 @@ const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
     const fullName = `${data.get("first_name")} ${data.get("last_name")}`.trim();
     data.set("_subject", `New Nurse2Tech profile: ${fullName} — ${data.get("roles")}`);
     data.set("_replyto", data.get("email"));
+    data.set("_template", "table");
+    data.set("_captcha", "false");
 
     submitBtn.disabled = true;
     submitBtn.textContent = "Submitting…";
     note.textContent = "";
 
     try {
-      if (FORM_ENDPOINT.includes("YOUR_FORM_ID")) throw new Error("Form endpoint not set up yet.");
       const res = await fetch(FORM_ENDPOINT, { method: "POST", body: data, headers: { Accept: "application/json" } });
-      if (!res.ok) throw new Error((await res.json().catch(() => ({}))).errors?.[0]?.message || "Submission failed.");
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || String(json.success) !== "true") throw new Error(json.message || "Submission failed.");
 
       document.getElementById("success-name").textContent = data.get("first_name");
       form.hidden = true;
