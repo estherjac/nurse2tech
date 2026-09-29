@@ -1,3 +1,8 @@
+// WhatsApp community invite link (https://chat.whatsapp.com/…). WhatsApp links stay hidden until this is set.
+const WHATSAPP_URL = "";
+document.querySelectorAll("[data-whatsapp]").forEach((a) => { if (WHATSAPP_URL) a.href = WHATSAPP_URL; });
+document.querySelectorAll("[data-whatsapp-block]").forEach((el) => { el.hidden = !WHATSAPP_URL; });
+
 // Where contact form submissions go.
 const CONTACT_EMAIL = "esther.jacob@guardoc.health";
 
