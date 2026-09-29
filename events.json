@@ -9,5 +9,15 @@
     "description": "An informal conversation with nurses working as product managers.",
     "url": "https://example.com/register"
   },
-  "events": []
+  "events": [
+    {
+      "title": "AI for Nurses: What AI implementation really looks like",
+      "date": "2026-09-24",
+      "time": "9:00 PM IDT",
+      "format": "Virtual",
+      "location": "Webinar hosted by C8 Health",
+      "description": "A panel of nurse leaders on evaluating clinical AI, where it makes a real impact, and why nurses need a seat at the table.",
+      "url": "https://lnkd.in/dw9tQYdH"
+    }
+  ]
 }

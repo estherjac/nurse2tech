@@ -58,6 +58,15 @@
     <section class="apply-body">
       <div class="container apply-grid">
 
+        <div class="wa-offer" data-whatsapp-block hidden>
+          <svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5zm0 1.7a7.8 7.8 0 1 1-4 14.5l-.3-.2-2.8.8.8-2.7-.2-.3A7.8 7.8 0 0 1 12 4.2zM8.9 7.6c-.2 0-.5 0-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.6.7 3.1.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.8-.7-1.3-1.5-1.4-1.8-.2-.3 0-.4.1-.5l.4-.5.3-.4c.1-.2 0-.3 0-.5l-.8-2c-.2-.5-.4-.5-.6-.5h-.6z"/></svg>
+          <div class="wa-offer-text">
+            <strong>Want to connect right away?</strong>
+            <span>Join our WhatsApp community for job alerts, event invites and nurses already in health tech.</span>
+          </div>
+          <a class="btn btn-sm btn-wa" data-whatsapp href="#" target="_blank" rel="noopener">Join WhatsApp</a>
+        </div>
+
         <form class="apply-form" id="apply-form" novalidate>
           <!-- Spam trap: hidden from people, bots fill it in -->
           <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -203,6 +212,10 @@
               <label for="notes">Anything else we should know? <span class="opt">(optional)</span></label>
               <textarea id="notes" name="notes" rows="4"></textarea>
             </div>
+            <label class="consent wa-opt">
+              <input type="checkbox" name="whatsapp_community" value="Yes, add me">
+              <span><b>Add me to the Nurse2Tech WhatsApp community</b> for job alerts, event invites and questions answered by nurses in tech. Add your phone number in step 1.</span>
+            </label>
             <label class="consent">
               <input type="checkbox" name="consent" value="yes" required>
               <span>I agree that Nurse2Tech may contact me about my submission. *</span>

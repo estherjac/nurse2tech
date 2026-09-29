@@ -12,6 +12,7 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.healt
     ai: "Clinical AI / Content",
     sales: "Sales / Solutions",
     data: "Data & Analytics",
+    operations: "Clinical Operations",
   };
 
   // Quick searches: keyword sent to LinkedIn and Indeed for each role
@@ -90,7 +91,7 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.healt
         <div class="job-main">
           <div class="res-tags">
             <span class="tag">${esc(CATEGORY_LABELS[j.category] || j.category)}</span>
-            <span class="tag tag-paid">${esc(j.work_setting)}</span>
+            ${j.work_setting ? `<span class="tag tag-paid">${esc(j.work_setting)}</span>` : ""}
           </div>
           <h3>${esc(j.title)}</h3>
           <p class="job-co">${esc(j.company)} · <svg><use href="#i-pin"/></svg> ${esc(j.location)}</p>

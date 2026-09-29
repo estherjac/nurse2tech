@@ -1,5 +1,5 @@
 {
-  "_help": "Featured jobs shown on jobs.html. Add one object per job. category must be one of: informatics, product, ux, implementation, success, ai, sales, data. work_setting: Remote, Hybrid or On-site. posted: YYYY-MM-DD.",
+  "_help": "Featured jobs shown on jobs.html. Add one object per job. category must be one of: informatics, product, ux, implementation, success, ai, sales, data, operations. work_setting: Remote, Hybrid or On-site. posted: YYYY-MM-DD.",
   "_example": {
     "title": "Clinical Informatics Specialist",
     "company": "Example Health",
@@ -10,5 +10,46 @@
     "posted": "2026-09-29",
     "description": "One or two sentences about the role."
   },
-  "jobs": []
+  "jobs": [
+    {
+      "title": "Clinical Support – Orthopedics (Joints)",
+      "company": "Johnson & Johnson MedTech",
+      "location": "Shefayim, Israel",
+      "work_setting": "",
+      "category": "implementation",
+      "url": "https://www.linkedin.com/jobs/view/4470967405/",
+      "posted": "2026-09-27",
+      "description": "Clinical and technical support during orthopedic procedures, working directly with surgeons and OR teams, plus product education and training. Looking for a clinical or scientific background and an interest in medical devices."
+    },
+    {
+      "title": "Clinical Data Labeler",
+      "company": "Sensi.AI",
+      "location": "Tel Aviv, Israel",
+      "work_setting": "Hybrid",
+      "category": "ai",
+      "url": "https://www.linkedin.com/jobs/view/4470273712/",
+      "posted": "2026-09-24",
+      "description": "Review and classify clinical data used to train AI models, working closely with the AI team. A great entry point for nurses who want to apply clinical knowledge in AI."
+    },
+    {
+      "title": "Robotic Startup Specialist",
+      "company": "Medtronic",
+      "location": "Herzliya, Israel",
+      "work_setting": "",
+      "category": "implementation",
+      "url": "https://www.linkedin.com/jobs/view/4459817410/",
+      "posted": "2026-09-24",
+      "description": "Combine your OR background with training, implementation and supporting hospitals as they adopt new surgical technology. Requires a nursing degree and 2+ years of OR/surgical experience."
+    },
+    {
+      "title": "Patient Coordinator (Medical Navigator)",
+      "company": "Breeoot",
+      "location": "Ra'anana, Israel",
+      "work_setting": "Hybrid",
+      "category": "operations",
+      "url": "https://www.linkedin.com/jobs/view/4470931218/",
+      "posted": "2026-09-23",
+      "description": "A full-time junior role at a health tech startup for Israeli-licensed RNs: working with clients, owning processes end to end, and collaborating with medical teams."
+    }
+  ]
 }
