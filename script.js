@@ -14,17 +14,19 @@ const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 10);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
-// Mobile menu
-toggle.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
+// Menu (three-line button)
+const setMenu = (open) => {
+  nav.classList.toggle("open", open);
   toggle.setAttribute("aria-expanded", open);
+  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+};
+toggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  setMenu(!nav.classList.contains("open"));
 });
-document.querySelectorAll(".nav-links a").forEach((a) =>
-  a.addEventListener("click", () => {
-    nav.classList.remove("open");
-    toggle.setAttribute("aria-expanded", false);
-  })
-);
+document.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+document.addEventListener("click", (e) => { if (!e.target.closest(".nav-links")) setMenu(false); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
 // Reveal on scroll
 const io = new IntersectionObserver(

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us — Nurse2Tech</title>
-  <meta name="description" content="Get in touch with Nurse2Tech: questions, partnerships, speaking, or help finding a nurse in the role you want.">
+  <title>N2T Spotlight — Nurse2Tech</title>
+  <meta name="description" content="N2T Spotlight: stories from nurses who moved from the bedside into health tech.">
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,8 +54,8 @@
         <a href="resources.html">Resources</a>
         <a href="events.html">Events</a>
         <a href="jobs.html">Jobs</a>
-        <a href="spotlight.html">Spotlight</a>
-        <a href="contact.html" aria-current="page">Contact us</a>
+        <a href="spotlight.html" aria-current="page">Spotlight</a>
+        <a href="contact.html">Contact us</a>
         <a href="apply.html" class="btn btn-sm nav-menu-join">Join the community</a>
       </nav>
     </div>
@@ -63,80 +63,41 @@
 
   <main>
     <section class="apply-hero">
-      <div class="blob blob-1" aria-hidden="true"></div>
       <div class="container">
-        <p class="eyebrow">Contact us</p>
-        <h1>Let's <span class="accent">talk.</span></h1>
-        <p class="lead">Questions, partnerships, speaking invitations, or looking for a nurse in a specific role? We'd love to hear from you.</p>
+        <p class="eyebrow">N2T Spotlight</p>
+        <h1>Nurses who <span class="accent">made the move.</span></h1>
+        <p class="lead">Real stories from nurses now working in health tech: how they got their first role, what helped, and what they'd tell you.</p>
       </div>
     </section>
 
-    <section class="apply-body">
-      <div class="container apply-grid">
-        <div>
-          <form class="form contact-card" id="contact-page-form" data-formsubmit data-subject="Nurse2Tech contact: {topic} from {name}" data-success="#contact-success" novalidate>
-            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="row-2">
-              <div class="field">
-                <label for="c-name">Name *</label>
-                <input id="c-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="c-email">Email *</label>
-                <input id="c-email" name="email" type="email" autocomplete="email" required>
-              </div>
-            </div>
-            <div class="row-2">
-              <div class="field">
-                <label for="c-who">I am a…</label>
-                <select id="c-who" name="i_am">
-                  <option>Nurse</option>
-                  <option>Nursing student</option>
-                  <option>Employer / recruiter</option>
-                  <option>Partner or sponsor</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="c-topic">Topic</label>
-                <select id="c-topic" name="topic">
-                  <option>General question</option>
-                  <option>Connect me with a nurse in tech</option>
-                  <option>Partnership</option>
-                  <option>Speaking or events</option>
-                  <option>Hiring nurses</option>
-                </select>
-              </div>
-            </div>
-            <div class="field">
-              <label for="c-msg">Message *</label>
-              <textarea id="c-msg" name="message" rows="6" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-block">Send message <svg class="ico-sm"><use href="#i-arrow"/></svg></button>
-            <p class="form-note" role="status" aria-live="polite"></p>
-          </form>
-          <div class="success" id="contact-success" hidden>
-            <svg class="success-ico"><use href="#i-check"/></svg>
-            <h2>Message <span class="accent">sent!</span></h2>
-            <p class="sub">Thanks for reaching out. We'll get back to you soon.</p>
-            <a href="index.html" class="btn">Back to home</a>
-          </div>
+    <!-- SPOTLIGHT -->
+    <section class="section spot-page" id="tamara">
+      <div class="container spotlight">
+        <div class="spot-copy">
+          <h2>Meet Tamara: from mother-baby nurse to clinical data analyst</h2>
+          <blockquote>“I didn't get here because I had a traditional technical background. I got here by combining clinical knowledge with curiosity.”</blockquote>
+          <p class="sub">Tamara studied nursing at Northeastern University, moved to Israel and worked as a mother-baby nurse. She took a data analytics course, then landed her first health tech role as a junior data annotator, where she was soon writing annotation guidelines and translating clinical logic into model rules. Today she's a Clinical Data Analyst at Droxi AI.</p>
+          <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7503506429979553792/" target="_blank" rel="noopener">Read Tamara's full story on LinkedIn <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
         </div>
+        <div class="spot-steps">
+          <h3>Her path</h3>
+          <ol class="timeline">
+            <li><b>Bedside nurse</b><span>Mother-baby nursing in Israel</span></li>
+            <li><b>Data analytics course</b><span>Six months that opened a new world</span></li>
+            <li><b>Junior data annotator</b><span>Training NLP models to spot clinical changes</span></li>
+            <li><b>Clinical Data Analyst</b><span>Droxi AI</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-        <aside class="apply-side">
-          <div class="side-card">
-            <h3>Other ways to reach us</h3>
-            <a class="contact-line" href="mailto:esther.jacob@guardoc.health"><svg><use href="#i-mail"/></svg> esther.jacob@guardoc.health</a>
-            <a class="contact-line" href="https://www.linkedin.com/company/nurse2tech/" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg> Nurse2Tech on LinkedIn</a>
-            <a class="contact-line" data-whatsapp data-whatsapp-block hidden href="#" target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5zm0 1.7a7.8 7.8 0 1 1-4 14.5l-.3-.2-2.8.8.8-2.7-.2-.3A7.8 7.8 0 0 1 12 4.2zM8.9 7.6c-.2 0-.5 0-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.6.7 3.1.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.8-.7-1.3-1.5-1.4-1.8-.2-.3 0-.4.1-.5l.4-.5.3-.4c.1-.2 0-.3 0-.5l-.8-2c-.2-.5-.4-.5-.6-.5h-.6z"/></svg> WhatsApp community</a>
-          </div>
-          <div class="side-card">
-            <svg class="side-ico"><use href="#i-people"/></svg>
-            <h3>Looking for a nurse in a specific role?</h3>
-            <p class="side-text">Share your background and goals, and we'll try to make the connection.</p>
-            <a href="apply.html" class="card-link">Join the community <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
-          </div>
-        </aside>
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <h2>Know a nurse we should spotlight?</h2>
+          <p>Or made the move yourself? We'd love to share your story.</p>
+        </div>
+        <a href="contact.html" class="btn">Get in touch</a>
       </div>
     </section>
   </main>
