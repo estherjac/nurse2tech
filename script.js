@@ -128,3 +128,24 @@ document.querySelectorAll("form[data-formsubmit]").forEach((f) => {
     }
   });
 });
+
+// Home: newest three jobs from the job board
+const latestJobs = document.getElementById("latest-jobs");
+if (latestJobs) {
+  const LABELS = { informatics: "Clinical Informatics", product: "Product Management", ux: "UX Research / Design", implementation: "Clinical Implementation", success: "Clinical Success", ai: "Clinical AI", sales: "Sales / Solutions", data: "Data & Analytics", operations: "Clinical Operations" };
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+  fetch("jobs.json", { cache: "no-store" })
+    .then((r) => r.json())
+    .then((d) => {
+      const jobs = (d.jobs || []).sort((a, b) => String(b.posted).localeCompare(String(a.posted))).slice(0, 3);
+      if (!jobs.length) { document.getElementById("latest").hidden = true; return; }
+      latestJobs.innerHTML = jobs.map((j) => `
+        <a class="lj" href="${esc(j.url)}" target="_blank" rel="noopener">
+          <span class="lj-tag">${esc(LABELS[j.category] || j.category)}</span>
+          <b>${esc(j.title)}</b>
+          <span class="lj-co">${esc(j.company)} · ${esc(j.location)}</span>
+          <span class="lj-go">View role →</span>
+        </a>`).join("");
+    })
+    .catch(() => { document.getElementById("latest").hidden = true; });
+}
