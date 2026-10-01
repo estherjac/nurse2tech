@@ -1,5 +1,5 @@
 {
-  "_help": "Featured jobs shown on jobs.html. Add one object per job. category must be one of: informatics, product, ux, implementation, success, ai, sales, data, operations. work_setting: Remote, Hybrid or On-site. posted: YYYY-MM-DD.",
+  "_help": "Featured jobs shown on jobs.html. Add one object per job. category must be one of: informatics, product, ux, implementation, success, ai, sales, data, operations. work_setting: Remote, Hybrid or On-site. posted: YYYY-MM-DD. When a role stops accepting applicants, add closed: true and closed_date: YYYY-MM-DD — it moves to the greyed-out list.",
   "_example": {
     "title": "Clinical Informatics Specialist",
     "company": "Example Health",

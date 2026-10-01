@@ -32,13 +32,11 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
     return d <= 0 ? "Today" : d === 1 ? "1 day ago" : d < 30 ? `${d} days ago` : new Date(dateStr).toLocaleDateString();
   }
 
-  function renderJobs() {
-    const shown = jobs.filter((j) => cat === "all" || j.category === cat);
-    list.innerHTML = shown.map((j) => `
-      <article class="job">
+  const card = (j, closed) => `
+      <article class="job${closed ? " job-closed" : ""}">
         <div class="job-main">
           <div class="res-tags">
-            ${isNew(j.posted) ? `<span class="tag tag-new">New</span>` : ""}
+            ${closed ? `<span class="tag tag-closed">No longer accepting applicants</span>` : isNew(j.posted) ? `<span class="tag tag-new">New</span>` : ""}
             <span class="tag">${esc(CATEGORY_LABELS[j.category] || j.category)}</span>
             ${j.work_setting ? `<span class="tag tag-paid">${esc(j.work_setting)}</span>` : ""}
           </div>
@@ -47,15 +45,25 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
           ${j.description ? `<p class="job-desc">${esc(j.description)}</p>` : ""}
         </div>
         <div class="job-side">
-          <span class="job-date">${esc(daysAgo(j.posted))}</span>
-          <a class="btn btn-sm" href="${esc(j.url)}" target="_blank" rel="noopener">Apply <svg class="ico-sm"><use href="#i-ext"/></svg></a>
+          <span class="job-date">${closed ? (j.closed_date ? "Closed " + esc(new Date(j.closed_date + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })) : "Closed") : esc(daysAgo(j.posted))}</span>
+          ${closed ? "" : `<a class="btn btn-sm" href="${esc(j.url)}" target="_blank" rel="noopener">Apply <svg class="ico-sm"><use href="#i-ext"/></svg></a>`}
         </div>
-      </article>`).join("");
-    empty.hidden = shown.length > 0;
-    if (!shown.length) {
-      empty.querySelector("h3").textContent = jobs.length ? "No featured roles in this category yet" : "New featured roles are on the way";
+      </article>`;
+
+  function renderJobs() {
+    const inCat = jobs.filter((j) => cat === "all" || j.category === cat);
+    const open = inCat.filter((j) => !j.closed);
+    const closed = inCat.filter((j) => j.closed);
+    list.innerHTML = open.map((j) => card(j, false)).join("");
+    const closedWrap = document.getElementById("closed-wrap");
+    document.getElementById("closed-list").innerHTML = closed.map((j) => card(j, true)).join("");
+    closedWrap.hidden = closed.length === 0;
+    empty.hidden = open.length > 0;
+    if (!open.length) {
+      empty.querySelector("h3").textContent = jobs.length ? "No open roles in this category right now" : "New featured roles are on the way";
     }
   }
+
 
   chips.forEach((c) => c.addEventListener("click", () => {
     cat = c.dataset.jfilter;
