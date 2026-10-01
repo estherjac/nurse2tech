@@ -236,7 +236,7 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 .event-bar button { background: none; border: 0; color: #c7d5f3; font-size: 1.2rem; cursor: pointer; line-height: 1; }
 
 @media (prefers-reduced-motion: reduce) {
-  .connect-pulse, .hero-icons svg, .footer-icons svg { animation: none !important; }
+  .hero-icons svg, .footer-icons svg { animation: none !important; }
 }
 
 /* Centred hero */
