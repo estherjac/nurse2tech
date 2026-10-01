@@ -24,6 +24,8 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.healt
   let jobs = [];
   let cat = "all";
 
+  const isNew = (d) => (Date.now() - new Date(d + "T00:00:00")) / 86400000 <= 7;
+
   function daysAgo(dateStr) {
     const d = Math.floor((Date.now() - new Date(dateStr + "T00:00:00")) / 86400000);
     if (isNaN(d)) return "";
@@ -36,6 +38,7 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.healt
       <article class="job">
         <div class="job-main">
           <div class="res-tags">
+            ${isNew(j.posted) ? `<span class="tag tag-new">New</span>` : ""}
             <span class="tag">${esc(CATEGORY_LABELS[j.category] || j.category)}</span>
             ${j.work_setting ? `<span class="tag tag-paid">${esc(j.work_setting)}</span>` : ""}
           </div>
@@ -69,6 +72,12 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.healt
         const f = c.dataset.jfilter;
         if (f !== "all" && !jobs.some((x) => x.category === f)) c.hidden = true;
       });
+      const want = new URLSearchParams(location.search).get("cat");
+      const chip = want && [...chips].find((c) => c.dataset.jfilter === want && !c.hidden);
+      if (chip) {
+        cat = want;
+        chips.forEach((c) => c.classList.toggle("active", c === chip));
+      }
       renderJobs();
     })
     .catch(() => {

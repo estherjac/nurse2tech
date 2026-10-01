@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>N2T Spotlight — Nurse2Tech</title>
-  <meta name="description" content="N2T Spotlight: stories from nurses who moved from the bedside into health tech.">
+  <title>Which Health Tech Role Fits You? — Nurse2Tech</title>
+  <meta name="description" content="Take the 2-minute Nurse2Tech quiz and find the health tech role that fits your nursing strengths.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nurse2Tech">
-  <meta property="og:title" content="N2T Spotlight — Nurse2Tech">
-  <meta property="og:description" content="N2T Spotlight: stories from nurses who moved from the bedside into health tech.">
-  <meta property="og:url" content="https://estherjac.github.io/nurse2tech/spotlight.html">
+  <meta property="og:title" content="Which health tech role fits you? — Nurse2Tech">
+  <meta property="og:description" content="Take the 2-minute Nurse2Tech quiz and find the health tech role that fits your nursing strengths.">
+  <meta property="og:url" content="https://estherjac.github.io/nurse2tech/quiz.html">
   <meta property="og:image" content="https://estherjac.github.io/nurse2tech/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -64,7 +64,7 @@
         <a href="resources.html">Resources</a>
         <a href="jobs.html">Jobs</a>
         <a href="events.html">Events</a>
-        <a href="spotlight.html" aria-current="page">Spotlight</a>
+        <a href="spotlight.html">Spotlight</a>
         <a href="contact.html">Contact us</a>
         <a href="apply.html" class="btn btn-sm nav-menu-join">Join the community</a>
       </nav>
@@ -74,41 +74,32 @@
   <main>
     <section class="apply-hero">
       <div class="container">
-        <p class="eyebrow">N2T Spotlight</p>
-        <h1>Nurses who <span class="accent">made the move.</span></h1>
-        <p class="lead">Real stories from nurses now working in health tech: how they got their first role, what helped, and what they'd tell you.</p>
-        <a href="contact.html?topic=nominate" class="btn btn-ghost">Nominate a nurse</a>
+        <p class="eyebrow">Role quiz</p>
+        <h1>Which health tech role <span class="accent">fits you?</span></h1>
+        <p class="lead">Five quick questions about how you like to work. We'll match you with the roles nurses move into most.</p>
       </div>
     </section>
 
-    <!-- SPOTLIGHT -->
-    <section class="section spot-page" id="tamara">
-      <div class="container spotlight">
-        <div class="spot-copy">
-          <h2>Meet Tamara: from the bedside to clinical data</h2>
-          <blockquote>“I didn't get here because I had a traditional technical background. I got here by combining clinical knowledge with curiosity.”</blockquote>
-          <p class="sub">Tamara studied nursing at Northeastern University, moved to Israel and worked at the bedside caring for new mothers and newborns. She took a data analytics course, then landed her first health tech role as a junior data annotator, where she was soon writing annotation guidelines and translating clinical logic into model rules. Today she's a Clinical Data Analyst at Droxi AI.</p>
-          <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7503506429979553792/" target="_blank" rel="noopener">Read Tamara's full story on LinkedIn <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+    <section class="section quiz-section">
+      <div class="container">
+        <div class="quiz" id="quiz">
+          <div class="quiz-progress"><span id="quiz-bar"></span></div>
+          <p class="quiz-count" id="quiz-count"></p>
+          <h2 class="quiz-q" id="quiz-q"></h2>
+          <div class="quiz-options" id="quiz-options"></div>
+          <button class="quiz-back" id="quiz-back" type="button" hidden>← Back</button>
         </div>
-        <div class="spot-steps">
-          <h3>Her path</h3>
-          <ol class="timeline">
-            <li><b>Bedside nurse</b><span>Maternal and newborn care, Israel</span></li>
-            <li><b>Data analytics course</b><span>Six months that opened a new world</span></li>
-            <li><b>Junior data annotator</b><span>Training NLP models to spot clinical changes</span></li>
-            <li><b>Clinical Data Analyst</b><span>Droxi AI</span></li>
-          </ol>
-        </div>
-      </div>
-    </section>
 
-    <section class="cta-band">
-      <div class="container cta-inner">
-        <div>
-          <h2>Know a nurse we should spotlight?</h2>
-          <p>Or made the move yourself? We'd love to share your story.</p>
+        <div class="quiz-result" id="quiz-result" hidden>
+          <p class="eyebrow">Your best matches</p>
+          <div class="quiz-matches" id="quiz-matches"></div>
+          <div class="quiz-actions">
+            <a class="btn" href="apply.html">Join the community</a>
+            <a class="btn btn-ghost" id="quiz-jobs" href="jobs.html">See matching jobs</a>
+            <a class="btn btn-ghost" id="quiz-share" href="#" target="_blank" rel="noopener">Share on LinkedIn</a>
+          </div>
+          <button class="quiz-back" id="quiz-restart" type="button">↺ Take the quiz again</button>
         </div>
-        <a href="contact.html?topic=nominate" class="btn">Nominate a nurse</a>
       </div>
     </section>
   </main>
@@ -142,6 +133,7 @@
     </div>
   </footer>
 
+  <script src="quiz.js?v=202610011218"></script>
   <script src="script.js?v=202610011218"></script>
 </body>
 </html>

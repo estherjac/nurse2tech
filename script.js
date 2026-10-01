@@ -133,7 +133,7 @@ if (latestJobs) {
       }
       latestJobs.innerHTML = jobs.map((j) => `
         <a class="lj" href="${esc(j.url)}" target="_blank" rel="noopener">
-          <span class="lj-tag">${esc(LABELS[j.category] || j.category)}</span>
+          <span class="lj-tags">${(Date.now() - new Date(j.posted + "T00:00:00")) / 86400000 <= 7 ? `<span class="lj-tag lj-new">New</span>` : ""}<span class="lj-tag">${esc(LABELS[j.category] || j.category)}</span></span>
           <b>${esc(j.title)}</b>
           <span class="lj-co">${esc(j.company)} · ${esc(j.location)}</span>
           <span class="lj-go">View role →</span>
@@ -149,3 +149,44 @@ if (topicSel) {
   const map = { nominate: "Nominate a nurse for N2T Spotlight" };
   if (want && map[want]) topicSel.value = map[want];
 }
+
+// Statistics: count up from 0 when the strip scrolls into view
+const statNums = document.querySelectorAll(".stats-nums b");
+if (statNums.length && "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const run = (el) => {
+    const m = el.textContent.trim().match(/^(\d+)(\D*)$/);
+    if (!m) return;                       // e.g. "1:1" stays as it is
+    const end = +m[1], suffix = m[2], t0 = performance.now(), dur = 1200;
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(end * eased) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (e.isIntersecting) { io.unobserve(e.target); setTimeout(() => run(e.target), 150); }
+  }), { threshold: 0.6 });
+  statNums.forEach((el) => io.observe(el));
+}
+
+// "Next event" banner: shows on every page only when an upcoming event exists
+fetch("events.json", { cache: "no-store" })
+  .then((r) => r.json())
+  .then((d) => {
+    const today = new Date().toISOString().slice(0, 10);
+    const next = (d.events || []).filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date))[0];
+    if (!next) return;
+    try { if (sessionStorage.getItem("n2t-hide-event") === next.title) return; } catch (e) {}
+    const when = new Date(next.date + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    const bar = document.createElement("div");
+    bar.className = "event-bar";
+    const safe = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+    bar.innerHTML = `<div class="container event-bar-inner"><span><b>Next event:</b> ${safe(next.title)} · ${when}${next.time ? " · " + safe(next.time) : ""}</span><a href="${safe(next.url || "events.html")}"${next.url ? ' target="_blank" rel="noopener"' : ""}>Register →</a><button type="button" aria-label="Hide event banner">×</button></div>`;
+    bar.querySelector("button").addEventListener("click", () => {
+      bar.remove();
+      try { sessionStorage.setItem("n2t-hide-event", next.title); } catch (e) {}
+    });
+    document.body.prepend(bar);
+  })
+  .catch(() => {});
