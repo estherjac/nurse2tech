@@ -15,61 +15,7 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.healt
     operations: "Clinical Operations",
   };
 
-  // Quick searches: keyword sent to LinkedIn and Indeed for each role
-  const ROLE_SEARCHES = [
-    { cat: "informatics", title: "Clinical Informatics", q: "nurse informatics", blurb: "EHR optimization, workflow design, clinician training." },
-    { cat: "product", title: "Clinical Product Manager", q: "clinical product manager", blurb: "Turn frontline problems into products." },
-    { cat: "ux", title: "UX Research (Healthcare)", q: "healthcare UX researcher", blurb: "Study how clinicians and patients use tools." },
-    { cat: "implementation", title: "Clinical Implementation", q: "clinical implementation specialist", blurb: "Roll out new tech at hospitals and clinics." },
-    { cat: "success", title: "Clinical Success", q: "clinical customer success manager", blurb: "Drive adoption with health system customers." },
-    { cat: "ai", title: "Clinical AI / Content", q: "nurse clinical content AI", blurb: "Validate clinical logic and AI outputs." },
-    { cat: "sales", title: "Clinical Sales / Solutions", q: "clinical solutions consultant nurse", blurb: "Demo products with clinical credibility." },
-    { cat: "data", title: "Clinical Data Analyst", q: "clinical data analyst nurse", blurb: "Quality metrics, dashboards, outcomes." },
-  ];
-
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-  const remoteOnly = document.getElementById("remote-only");
-
-  function linkedInUrl(q, loc, remote) {
-    const p = new URLSearchParams({ keywords: q });
-    if (loc) p.set("location", loc);
-    if (remote) p.set("f_WT", "2");
-    return `https://www.linkedin.com/jobs/search/?${p}`;
-  }
-  function indeedUrl(q, loc, remote) {
-    const p = new URLSearchParams({ q });
-    p.set("l", remote ? "Remote" : loc || "");
-    return `https://www.indeed.com/jobs?${p}`;
-  }
-
-  // Role search tiles
-  const tiles = document.getElementById("role-searches");
-  function renderTiles() {
-    const remote = remoteOnly.checked;
-    tiles.innerHTML = ROLE_SEARCHES.map((r) => `
-      <div class="rs">
-        <h3>${esc(r.title)}</h3>
-        <p>${esc(r.blurb)}</p>
-        <div class="rs-links">
-          <a href="${linkedInUrl(r.q, "", remote)}" target="_blank" rel="noopener">LinkedIn <svg><use href="#i-ext"/></svg></a>
-          <a href="${indeedUrl(r.q, "", remote)}" target="_blank" rel="noopener">Indeed <svg><use href="#i-ext"/></svg></a>
-        </div>
-      </div>`).join("");
-  }
-  remoteOnly.addEventListener("change", renderTiles);
-  renderTiles();
-
-  // Hero search → open LinkedIn (and offer Indeed)
-  const searchForm = document.getElementById("job-search");
-  const searchNote = document.querySelector(".job-search-note");
-  searchForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const q = document.getElementById("q").value.trim() || "nurse health tech";
-    const loc = document.getElementById("loc").value.trim();
-    const remote = /^remote$/i.test(loc);
-    window.open(linkedInUrl(q, remote ? "" : loc, remote), "_blank", "noopener");
-    searchNote.innerHTML = `Opened LinkedIn in a new tab. Also try <a href="${indeedUrl(q, loc, remote)}" target="_blank" rel="noopener">the same search on Indeed</a>.`;
-  });
 
   // Featured jobs from jobs.json
   const list = document.getElementById("job-list");
@@ -118,6 +64,11 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.healt
     .then((d) => {
       jobs = (d.jobs || []).sort((a, b) => String(b.posted).localeCompare(String(a.posted)));
       document.getElementById("job-filters").hidden = jobs.length === 0;
+      // only show filters that have at least one job
+      chips.forEach((c) => {
+        const f = c.dataset.jfilter;
+        if (f !== "all" && !jobs.some((x) => x.category === f)) c.hidden = true;
+      });
       renderJobs();
     })
     .catch(() => {

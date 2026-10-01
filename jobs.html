@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Job Board — Nurse2Tech</title>
-  <meta name="description" content="Health tech jobs for nurses: search live openings in informatics, product, UX, implementation and more, or post a role to reach nurses.">
+  <meta name="description" content="Clinical health tech jobs for nurses, hand-picked by Nurse2Tech.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nurse2Tech">
   <meta property="og:title" content="Job Board — Nurse2Tech">
-  <meta property="og:description" content="Health tech jobs for nurses: search live openings in informatics, product, UX, implementation and more, or post a role to reach nurses.">
+  <meta property="og:description" content="Clinical health tech jobs for nurses, hand-picked by Nurse2Tech.">
   <meta property="og:url" content="https://estherjac.github.io/nurse2tech/jobs.html">
   <meta property="og:image" content="https://estherjac.github.io/nurse2tech/assets/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202610010938">
+  <link rel="stylesheet" href="styles.css?v=202610010944">
 </head>
 <body>
 
@@ -79,48 +79,13 @@
         <a href="index.html" class="back"><svg class="ico-sm"><use href="#i-arrow"/></svg> Back to home</a>
         <p class="eyebrow">Job board</p>
         <h1>Health tech jobs <span class="accent">for nurses.</span></h1>
-        <p class="lead">Search live openings for the roles nurses move into most, browse jobs we've hand-picked, or post a role to reach clinical talent.</p>
-
-        <form class="job-search" id="job-search" role="search">
-          <label class="job-search-field">
-            <svg><use href="#i-search"/></svg>
-            <input type="search" id="q" placeholder="Job title or keyword, e.g. nurse informaticist" aria-label="Job title or keyword">
-          </label>
-          <label class="job-search-field job-search-loc">
-            <svg><use href="#i-pin"/></svg>
-            <input type="text" id="loc" placeholder="City, state or “Remote”" aria-label="Location">
-          </label>
-          <button type="submit" class="btn">Search jobs</button>
-        </form>
-        <p class="job-search-note">Opens results on LinkedIn Jobs and Indeed in a new tab.</p>
-      </div>
-    </section>
-
-    <!-- QUICK SEARCHES -->
-    <section class="section jobs-section">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Search by role</p>
-          <h2>Jump straight to <span class="accent">live openings</span></h2>
-          <p class="sub">Each search is tuned for nurse-friendly roles and always shows the latest postings.</p>
-        </div>
-        <label class="switch jobs-remote">
-          <input type="checkbox" id="remote-only">
-          <span class="track"><span class="thumb"></span></span>
-          Remote only
-        </label>
-        <div class="role-searches" id="role-searches"></div>
+        <p class="lead">Clinical roles in health tech, hand-picked by Nurse2Tech and shared on our LinkedIn. Every role here values nursing experience.</p>
       </div>
     </section>
 
     <!-- FEATURED -->
-    <section class="section section-tint" id="featured">
+    <section class="section jobs-section jobs-list-section" id="featured">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Featured jobs</p>
-          <h2>Hand-picked by <span class="accent">Nurse2Tech</span></h2>
-          <p class="sub">Roles we've reviewed that value clinical experience.</p>
-        </div>
         <div class="filters" id="job-filters">
           <button class="chip active" data-jfilter="all">All</button>
           <button class="chip" data-jfilter="informatics">Informatics</button>
@@ -136,7 +101,7 @@
         <div class="job-empty" id="job-empty" hidden>
           <svg><use href="#i-brief"/></svg>
           <h3>New featured roles are on the way</h3>
-          <p>In the meantime, use the live searches above, or <a href="apply.html">tell us the role you want</a> and we'll send openings your way.</p>
+          <p>New roles are shared on our LinkedIn first. <a href="https://www.linkedin.com/company/nurse2tech/" target="_blank" rel="noopener">Follow Nurse2Tech</a> or <a href="apply.html">tell us the role you want</a>.</p>
         </div>
       </div>
     </section>
@@ -249,7 +214,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202610010938"></script>
-  <script src="jobs.js?v=202610010938"></script>
+  <script src="script.js?v=202610010944"></script>
+  <script src="jobs.js?v=202610010944"></script>
 </body>
 </html>

@@ -134,6 +134,8 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 @keyframes beat-draw { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .beat { animation: none; stroke-dashoffset: 0; } }
 
+.section.jobs-list-section { padding-top: 0; }
+
 /* Centred hero */
 .hero-center .hero-grid { grid-template-columns: 1fr; }
 .hero-center .hero-copy { text-align: center; max-width: 900px; margin: 0 auto; }
