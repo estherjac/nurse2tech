@@ -123,8 +123,6 @@ if (latestJobs) {
     .then((d) => {
       const jobs = (d.jobs || []).filter((j) => !j.closed).sort((a, b) => String(b.posted).localeCompare(String(a.posted))).slice(0, 3);
       if (!jobs.length) { document.getElementById("latest").hidden = true; return; }
-      const statRoles = document.getElementById("stat-roles");
-      if (statRoles) statRoles.textContent = (d.jobs || []).length;
       const companies = [...new Set((d.jobs || []).map((j) => j.company))];
       const strip = document.getElementById("latest-companies");
       if (strip && companies.length) {
@@ -148,6 +146,15 @@ if (topicSel) {
   const want = new URLSearchParams(location.search).get("topic");
   const map = { nominate: "Nominate a nurse for N2T Spotlight" };
   if (want && map[want]) topicSel.value = map[want];
+}
+
+// Statistics: keep the resources number in step with the Resources page
+const statRes = document.getElementById("stat-resources");
+if (statRes) {
+  fetch("resources.html", { cache: "no-store" }).then((r) => r.text()).then((h) => {
+    const n = (h.match(/<a class="res[ "]/g) || []).length;
+    if (n) statRes.textContent = n;
+  }).catch(() => {});
 }
 
 // Statistics: count up from 0 when the strip scrolls into view
