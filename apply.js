@@ -1,6 +1,6 @@
 // Submissions are emailed to this address via FormSubmit (https://formsubmit.co).
 // The very first submission triggers a one-time activation email that must be confirmed.
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.health";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
 
 // Scoped in a block so names don't clash with script.js
 {

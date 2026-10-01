@@ -4,7 +4,7 @@ document.querySelectorAll("[data-whatsapp]").forEach((a) => { if (WHATSAPP_URL) 
 document.querySelectorAll("[data-whatsapp-block]").forEach((el) => { el.hidden = !WHATSAPP_URL; });
 
 // Where contact form submissions go.
-const CONTACT_EMAIL = "esther.jacob@guardoc.health";
+const CONTACT_EMAIL = "connect@nurse2tech.com";
 
 const nav = document.querySelector(".nav");
 const toggle = document.querySelector(".nav-toggle");
@@ -65,7 +65,7 @@ const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
 // Generic FormSubmit handler: <form data-formsubmit data-subject="… {field} …" data-success="#id">
-const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.health";
+const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
 document.querySelectorAll("form[data-formsubmit]").forEach((f) => {
   const status = f.querySelector(".form-note");
   const btn = f.querySelector('button[type="submit"]');

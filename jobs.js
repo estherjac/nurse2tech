@@ -1,5 +1,5 @@
 // Job posts from employers are emailed here via FormSubmit (same inbox as the join form).
-const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/esther.jacob@guardoc.health";
+const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
 
 // Scoped in a block so names don't clash with script.js
 {
