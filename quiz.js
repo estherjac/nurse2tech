@@ -66,7 +66,7 @@
         <p>${ROLES[k].text}</p>
       </article>`).join("");
     $("quiz-jobs").href = `jobs.html?cat=${ROLES[top[0]].cat}`;
-    const url = encodeURIComponent("https://estherjac.github.io/nurse2tech/quiz.html");
+    const url = encodeURIComponent("https://nurse2tech.com/quiz.html");
     $("quiz-share").href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
     $("quiz").hidden = true;
     $("quiz-result").hidden = false;
