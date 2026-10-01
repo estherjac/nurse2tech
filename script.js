@@ -139,6 +139,12 @@ if (latestJobs) {
     .then((d) => {
       const jobs = (d.jobs || []).sort((a, b) => String(b.posted).localeCompare(String(a.posted))).slice(0, 3);
       if (!jobs.length) { document.getElementById("latest").hidden = true; return; }
+      const companies = [...new Set((d.jobs || []).map((j) => j.company))];
+      const strip = document.getElementById("latest-companies");
+      if (strip && companies.length) {
+        strip.innerHTML = `<span>Roles we've shared from</span>` + companies.map((c) => `<b>${esc(c)}</b>`).join("<i></i>");
+        strip.hidden = false;
+      }
       latestJobs.innerHTML = jobs.map((j) => `
         <a class="lj" href="${esc(j.url)}" target="_blank" rel="noopener">
           <span class="lj-tag">${esc(LABELS[j.category] || j.category)}</span>
@@ -148,4 +154,12 @@ if (latestJobs) {
         </a>`).join("");
     })
     .catch(() => { document.getElementById("latest").hidden = true; });
+}
+
+// Contact page: preselect the topic from a link like contact.html?topic=nominate
+const topicSel = document.getElementById("c-topic");
+if (topicSel) {
+  const want = new URLSearchParams(location.search).get("topic");
+  const map = { nominate: "Nominate a nurse for N2T Spotlight" };
+  if (want && map[want]) topicSel.value = map[want];
 }
