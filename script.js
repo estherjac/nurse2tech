@@ -28,22 +28,6 @@ document.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("cli
 document.addEventListener("click", (e) => { if (!e.target.closest(".nav-links")) setMenu(false); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
-// Reveal on scroll
-const io = new IntersectionObserver(
-  (entries) =>
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("in");
-        io.unobserve(e.target);
-      }
-    }),
-  { threshold: 0.12 }
-);
-document.querySelectorAll(".reveal").forEach((el, i) => {
-  el.style.transitionDelay = `${(i % 4) * 80}ms`;
-  io.observe(el);
-});
-
 // Role filters
 const chips = document.querySelectorAll(".chip");
 const roles = document.querySelectorAll(".role");

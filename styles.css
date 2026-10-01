@@ -136,6 +136,29 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 
 .section.jobs-list-section { padding-top: 0; }
 
+/* Join form: optional details */
+.more-details { display: block; }
+.more-details summary { cursor: pointer; font-weight: 800; font-size: 1.1rem; color: var(--navy); list-style: none; display: flex; align-items: center; gap: 10px; }
+.more-details summary::-webkit-details-marker { display: none; }
+.more-details summary::before { content: "+"; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); font-size: 1.2rem; flex-shrink: 0; }
+.more-details[open] summary::before { content: "−"; }
+.more-details summary .opt { font-weight: 500; font-size: .9rem; }
+.more-body { display: grid; gap: 18px; margin-top: 20px; }
+.step-final { display: grid; gap: 14px; }
+.consent a, .privacy-note a { color: var(--blue); font-weight: 600; }
+.privacy-note { font-size: .85rem; color: var(--muted); margin-top: 6px; }
+
+/* Privacy page */
+.section.privacy-section { padding-top: 10px; }
+.privacy > * { max-width: 760px; }
+.privacy h2 { font-size: 1.35rem; margin: 34px 0 10px; }
+.privacy h2:first-child { margin-top: 0; }
+.privacy p, .privacy li { color: var(--muted); font-size: 1.02rem; }
+.privacy ul { padding-left: 20px; display: grid; gap: 6px; }
+.privacy a { color: var(--blue); font-weight: 600; }
+.privacy-updated { margin-top: 34px; font-size: .9rem; }
+.copy a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
 /* Centred hero */
 .hero-center .hero-grid { grid-template-columns: 1fr; }
 .hero-center .hero-copy { text-align: center; max-width: 900px; margin: 0 auto; }
@@ -503,11 +526,7 @@ h2 .accent, h2 .accent-light { color: inherit; }
 .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 @media (max-width: 600px) { .wa-offer { flex-direction: column; align-items: flex-start; } }
 
-/* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
 

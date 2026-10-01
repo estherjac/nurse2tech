@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202610010944">
+  <link rel="stylesheet" href="styles.css?v=202610010958">
 </head>
 <body class="page-apply">
 
@@ -65,7 +65,7 @@
         <a href="index.html" class="back"><svg class="ico-sm"><use href="#i-arrow"/></svg> Back to home</a>
         <p class="eyebrow">Join the Nurse2Tech community</p>
         <h1>Tell us about you — <span class="accent">and the role you want.</span></h1>
-        <p class="lead">Takes about 3 minutes. We'll review your profile and reach out with next steps, resources, or an introduction to a nurse already working in that role.</p>
+        <p class="lead">Takes about a minute. We'll review your profile and reach out with next steps, resources, or an introduction to a nurse already working in that role.</p>
       </div>
     </section>
 
@@ -97,78 +97,14 @@
                 <input id="last_name" name="last_name" type="text" autocomplete="family-name" required>
               </div>
             </div>
-            <div class="row-2">
-              <div class="field">
-                <label for="email">Email *</label>
-                <input id="email" name="email" type="email" autocomplete="email" required>
-              </div>
-              <div class="field">
-                <label for="phone">Phone <span class="opt">(optional)</span></label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel">
-              </div>
-            </div>
-            <div class="row-2">
-              <div class="field">
-                <label for="location">City / State *</label>
-                <input id="location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Austin, TX" required>
-              </div>
-              <div class="field">
-                <label for="linkedin">LinkedIn URL <span class="opt">(optional)</span></label>
-                <input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/…">
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="step">
-            <legend><span class="step-num">2</span> Your nursing background</legend>
-            <div class="row-2">
-              <div class="field">
-                <label for="credential">Credential *</label>
-                <select id="credential" name="credential" required>
-                  <option value="">Select…</option>
-                  <option>RN</option>
-                  <option>LPN / LVN</option>
-                  <option>NP</option>
-                  <option>CNS</option>
-                  <option>CRNA</option>
-                  <option>CNM</option>
-                  <option>Nursing student</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="years">Years of nursing experience *</label>
-                <select id="years" name="years_experience" required>
-                  <option value="">Select…</option>
-                  <option>Student / new grad</option>
-                  <option>1–2 years</option>
-                  <option>3–5 years</option>
-                  <option>6–10 years</option>
-                  <option>10+ years</option>
-                </select>
-              </div>
-            </div>
             <div class="field">
-              <label for="specialty">Specialty / unit *</label>
-              <input id="specialty" name="specialty" type="text" list="specialties" placeholder="e.g. ICU, ER, Med-Surg, Oncology…" required>
-              <datalist id="specialties">
-                <option value="ICU / Critical care">
-                <option value="Emergency">
-                <option value="Med-Surg">
-                <option value="Pediatrics">
-                <option value="Labor & Delivery">
-                <option value="Oncology">
-                <option value="OR / Perioperative">
-                <option value="Telemetry / Cardiac">
-                <option value="Home health">
-                <option value="Case management">
-                <option value="Informatics">
-              </datalist>
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
             </div>
           </fieldset>
 
           <fieldset class="step">
-            <legend><span class="step-num">3</span> The role you want</legend>
+            <legend><span class="step-num">2</span> The role you want</legend>
             <div class="field">
               <span class="label">Which health tech roles interest you? * <span class="opt">(pick all that apply)</span></span>
               <div class="pick-grid" id="roles-group">
@@ -183,20 +119,93 @@
                 <label class="pick"><input type="checkbox" name="roles" value="Not sure yet"><span>Not sure yet</span></label>
               </div>
             </div>
-            <div class="field">
-              <label for="dream_role">Describe your ideal position <span class="opt">(optional)</span></label>
-              <input id="dream_role" name="dream_role" type="text" placeholder="e.g. Clinical PM at a remote-first digital health startup">
+          </fieldset>
+
+          <fieldset class="step">
+            <legend><span class="step-num">3</span> How can we help? <span class="opt">(optional)</span></legend>
+            <div class="pick-grid">
+              <label class="pick"><input type="checkbox" name="help_with" value="Connect me with a nurse in this role"><span>Connect me with a nurse in this role</span></label>
+              <label class="pick"><input type="checkbox" name="help_with" value="Skill gap review"><span>Skill gap review</span></label>
+              <label class="pick"><input type="checkbox" name="help_with" value="Resume / LinkedIn reframing"><span>Resume / LinkedIn reframing</span></label>
+              <label class="pick"><input type="checkbox" name="help_with" value="Courses & certifications"><span>Courses & certifications</span></label>
             </div>
-            <div class="row-2">
-              <div class="field">
-                <span class="label">Work setting</span>
-                <div class="seg" role="radiogroup">
-                  <label><input type="radio" name="work_setting" value="Remote" checked><span>Remote</span></label>
-                  <label><input type="radio" name="work_setting" value="Hybrid"><span>Hybrid</span></label>
-                  <label><input type="radio" name="work_setting" value="On-site"><span>On-site</span></label>
-                  <label><input type="radio" name="work_setting" value="Open"><span>Open</span></label>
+          </fieldset>
+
+          <details class="step more-details">
+            <summary>Add more about you <span class="opt">(optional, helps us find the right match)</span></summary>
+            <div class="more-body">
+              <div class="row-2">
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label for="location">City / Country</label>
+                  <input id="location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Tel Aviv, Israel">
                 </div>
               </div>
+              <div class="field">
+                <label for="linkedin">LinkedIn URL</label>
+                <input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/…">
+              </div>
+              <div class="row-2">
+              <div class="field">
+                <label for="credential">Credential</label>
+                <select id="credential" name="credential">
+                  <option value="">Select…</option>
+                  <option>RN</option>
+                  <option>LPN / LVN</option>
+                  <option>NP</option>
+                  <option>CNS</option>
+                  <option>CRNA</option>
+                  <option>CNM</option>
+                  <option>Nursing student</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="years">Years of nursing experience</label>
+                <select id="years" name="years_experience">
+                  <option value="">Select…</option>
+                  <option>Student / new grad</option>
+                  <option>1–2 years</option>
+                  <option>3–5 years</option>
+                  <option>6–10 years</option>
+                  <option>10+ years</option>
+                </select>
+              </div>
+              </div>
+            <div class="field">
+              <label for="specialty">Specialty / unit</label>
+              <input id="specialty" name="specialty" type="text" list="specialties" placeholder="e.g. ICU, ER, Med-Surg, Oncology…">
+              <datalist id="specialties">
+                <option value="ICU / Critical care">
+                <option value="Emergency">
+                <option value="Med-Surg">
+                <option value="Pediatrics">
+                <option value="Labor & Delivery">
+                <option value="Oncology">
+                <option value="OR / Perioperative">
+                <option value="Telemetry / Cardiac">
+                <option value="Home health">
+                <option value="Case management">
+                <option value="Informatics">
+              </datalist>
+            </div>
+              <div class="field">
+                <label for="dream_role">Describe your ideal position</label>
+                <input id="dream_role" name="dream_role" type="text" placeholder="e.g. Clinical PM at a remote-first digital health startup">
+              </div>
+              <div class="row-2">
+                <div class="field">
+                  <span class="label">Work setting</span>
+                  <div class="seg" role="radiogroup">
+                    <label><input type="radio" name="work_setting" value="Remote"><span>Remote</span></label>
+                    <label><input type="radio" name="work_setting" value="Hybrid"><span>Hybrid</span></label>
+                    <label><input type="radio" name="work_setting" value="On-site"><span>On-site</span></label>
+                    <label><input type="radio" name="work_setting" value="Open"><span>Open</span></label>
+                  </div>
+                </div>
               <div class="field">
                 <label for="timeline">When do you want to transition?</label>
                 <select id="timeline" name="timeline">
@@ -207,34 +216,28 @@
                   <option>12+ months</option>
                 </select>
               </div>
+              </div>
+              <div class="field">
+                <label for="tech_exp">Any tech experience so far?</label>
+                <input id="tech_exp" name="tech_experience" type="text" placeholder="e.g. Epic super user, took a UX course, EHR go-live support…">
+              </div>
+              <div class="field">
+                <label for="notes">Anything else we should know?</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+              </div>
             </div>
-            <div class="field">
-              <label for="tech_exp">Any tech experience so far? <span class="opt">(optional)</span></label>
-              <input id="tech_exp" name="tech_experience" type="text" placeholder="e.g. Epic super user, took a UX course, EHR go-live support…">
-            </div>
-          </fieldset>
+          </details>
 
-          <fieldset class="step">
-            <legend><span class="step-num">4</span> How can we help?</legend>
-            <div class="pick-grid">
-              <label class="pick"><input type="checkbox" name="help_with" value="Connect me with a nurse in this role"><span>Connect me with a nurse in this role</span></label>
-              <label class="pick"><input type="checkbox" name="help_with" value="Skill gap review"><span>Skill gap review</span></label>
-              <label class="pick"><input type="checkbox" name="help_with" value="Resume / LinkedIn reframing"><span>Resume / LinkedIn reframing</span></label>
-              <label class="pick"><input type="checkbox" name="help_with" value="Courses & certifications"><span>Courses & certifications</span></label>
-            </div>
-            <div class="field">
-              <label for="notes">Anything else we should know? <span class="opt">(optional)</span></label>
-              <textarea id="notes" name="notes" rows="4"></textarea>
-            </div>
+          <div class="step step-final">
             <label class="consent wa-opt">
               <input type="checkbox" name="whatsapp_community" value="Yes, add me">
-              <span><b>Add me to the Nurse2Tech WhatsApp community</b> for job alerts, event invites and questions answered by nurses in tech. Add your phone number in step 1.</span>
+              <span><b>Add me to the Nurse2Tech WhatsApp community</b> for job alerts, event invites and questions answered by nurses in tech. Add your phone number under "Add more about you".</span>
             </label>
             <label class="consent">
               <input type="checkbox" name="consent" value="yes" required>
-              <span>I agree that Nurse2Tech may contact me about my submission. *</span>
+              <span>I agree that Nurse2Tech may contact me about my submission. * <a href="privacy.html" target="_blank">How we use your details</a></span>
             </label>
-          </fieldset>
+          </div>
 
           <button type="submit" class="btn btn-block btn-lg">Submit my profile <svg class="ico-sm"><use href="#i-arrow"/></svg></button>
           <p class="form-note" role="status" aria-live="polite"></p>
@@ -292,11 +295,11 @@
         <a href="https://www.linkedin.com/company/nurse2tech/" target="_blank" rel="noopener">LinkedIn</a>
         <a data-whatsapp data-whatsapp-block hidden href="#" target="_blank" rel="noopener">WhatsApp</a>
       </nav>
-      <p class="copy">© <span id="year"></span> Nurse2Tech</p>
+      <p class="copy">© <span id="year"></span> Nurse2Tech · <a href="privacy.html">Privacy</a></p>
     </div>
   </footer>
 
-  <script src="script.js?v=202610010944"></script>
-  <script src="apply.js?v=202610010944"></script>
+  <script src="script.js?v=202610010958"></script>
+  <script src="apply.js?v=202610010958"></script>
 </body>
 </html>
