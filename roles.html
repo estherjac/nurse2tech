@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Health Tech Roles for Nurses — Nurse2Tech</title>
+  <title>Health Tech Roles &amp; Quiz — Nurse2Tech</title>
   <meta name="description" content="The health tech roles nurses move into most: clinical informatics, product, UX research, implementation, clinical success and clinical AI.">
   <link rel="canonical" href="https://nurse2tech.com/roles.html">
   <meta property="og:type" content="website">
@@ -15,14 +15,14 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=202610011835">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=202610011835">
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=202610011835">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=202610011835">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=202610011856">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=202610011856">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=202610011856">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=202610011856">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202610011835">
+  <link rel="stylesheet" href="styles.css?v=202610011856">
 </head>
 <body>
 
@@ -65,7 +65,6 @@
       <nav class="nav-links" id="site-menu" aria-label="Main">
         <a href="about.html">About us</a>
         <a href="roles.html" aria-current="page">Roles</a>
-        <a href="quiz.html">Role quiz</a>
         <a href="resources.html">Resources</a>
         <a href="jobs.html">Jobs</a>
         <a href="events.html">Events</a>
@@ -80,13 +79,40 @@
     <section class="apply-hero">
       <div class="container">
         <p class="eyebrow">Roles</p>
-        <h1>Where nurses fit <span class="accent">in health tech.</span></h1>
-        <p class="lead">A few of the most common paths nurses take, and what each role actually involves day to day.</p>
+        <h1>Find your fit <span class="accent">in health tech.</span></h1>
+        <p class="lead">Take the 2-minute quiz to get matched, then explore the roles nurses move into most.</p>
       </div>
     </section>
 
-    <section class="section roles-page">
+    <section class="section quiz-section" id="quiz-section">
       <div class="container">
+        <p class="eyebrow">2-minute quiz</p>
+        <h2 class="roles-sub">Which role fits you?</h2>
+        <div class="quiz" id="quiz">
+          <div class="quiz-progress"><span id="quiz-bar"></span></div>
+          <p class="quiz-count" id="quiz-count"></p>
+          <h2 class="quiz-q" id="quiz-q"></h2>
+          <div class="quiz-options" id="quiz-options"></div>
+          <button class="quiz-back" id="quiz-back" type="button" hidden>← Back</button>
+        </div>
+
+        <div class="quiz-result" id="quiz-result" hidden>
+          <p class="eyebrow">Your best matches</p>
+          <div class="quiz-matches" id="quiz-matches"></div>
+          <div class="quiz-actions">
+            <a class="btn" href="apply.html">Join the community</a>
+            <a class="btn btn-ghost" id="quiz-jobs" href="jobs.html">See matching jobs</a>
+            <a class="btn btn-ghost" id="quiz-share" href="#" target="_blank" rel="noopener">Share on LinkedIn</a>
+          </div>
+          <button class="quiz-back" id="quiz-restart" type="button">↺ Take the quiz again</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roles-page section-tint" id="roles-list">
+      <div class="container">
+        <p class="eyebrow">Explore the roles</p>
+        <h2 class="roles-sub">Where nurses fit in health tech</h2>
         <div class="roles">
           <article class="role" data-cat="data">
             <h3>Clinical Informatics Specialist</h3>
@@ -113,14 +139,6 @@
             <p>Validate clinical logic, review AI outputs for safety, and author evidence-based content.</p>
           </article>
         </div>
-        <div class="quiz-cta roles-quiz">
-          <div>
-            <p class="eyebrow">2-minute quiz</p>
-            <h2>Not sure which one fits you?</h2>
-            <p class="sub">Answer five quick questions and get matched with the roles that suit your nursing strengths.</p>
-          </div>
-          <a class="btn btn-lg" href="quiz.html">Take the quiz <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
-        </div>
       </div>
     </section>
   </main>
@@ -146,7 +164,6 @@
         <a href="jobs.html">Jobs</a>
         <a href="events.html">Events</a>
         <a href="spotlight.html">Spotlight</a>
-        <a href="quiz.html">Role quiz</a>
         <a href="contact.html">Contact us</a>
         <a href="https://www.linkedin.com/company/nurse2tech/" target="_blank" rel="noopener">LinkedIn</a>
         <a data-whatsapp data-whatsapp-block hidden href="#" target="_blank" rel="noopener">WhatsApp</a>
@@ -155,6 +172,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202610011835"></script>
+  <script src="quiz.js?v=202610011856"></script>
+  <script src="script.js?v=202610011856"></script>
 </body>
 </html>
