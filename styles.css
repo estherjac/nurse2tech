@@ -217,8 +217,6 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 /* Moving pulse in the navy section */
 .section-dark { position: relative; }
 .section-dark .container { position: relative; z-index: 1; }
-.connect-pulse { position: absolute; left: 0; top: 50%; width: 200%; height: 180px; transform: translateY(-50%); opacity: .14; pointer-events: none; animation: pulse-drift 18s linear infinite; }
-@keyframes pulse-drift { to { transform: translate(-50%, -50%); } }
 
 /* Symbols react on hover */
 .hero-icons svg, .footer-icons svg, .card-ico { transition: transform .3s ease, filter .3s ease; }
