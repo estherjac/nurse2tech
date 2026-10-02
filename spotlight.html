@@ -15,14 +15,14 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=202610011858">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=202610011858">
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=202610011858">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=202610011858">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=202610020856">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=202610020856">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=202610020856">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=202610020856">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202610011858">
+  <link rel="stylesheet" href="styles.css?v=202610020856">
 </head>
 <body>
 
@@ -86,6 +86,26 @@
     </section>
 
     <!-- SPOTLIGHT -->
+    <section class="section spot-stories">
+      <div class="container">
+        <div class="story-cards">
+          <a class="story-card" href="#tamara">
+            <span class="story-avatar" aria-hidden="true">T</span>
+            <span class="tag">Clinical data</span>
+            <h3>Tamara</h3>
+            <p class="story-path"><span>Bedside nurse</span> → <b>Clinical Data Analyst, Droxi AI</b></p>
+            <span class="card-link">Read her story <svg class="ico-sm"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="story-card story-card-next" href="contact.html?topic=nominate">
+            <span class="story-avatar" aria-hidden="true">+</span>
+            <h3>Your story could be next</h3>
+            <p class="story-path">Made the move from nursing into health tech? We'd love to feature you.</p>
+            <span class="card-link">Share your story <svg class="ico-sm"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section spot-page" id="tamara">
       <div class="container spotlight">
         <div class="spot-copy">
@@ -103,6 +123,19 @@
             <li><b>Clinical Data Analyst</b><span>Droxi AI</span></li>
           </ol>
         </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="posts">
+      <div class="container">
+        <div class="latest-head">
+          <div>
+            <p class="eyebrow">From our LinkedIn</p>
+            <h2>Conversations, stories and tips</h2>
+          </div>
+          <a class="card-link" href="https://www.linkedin.com/company/nurse2tech/" target="_blank" rel="noopener">Follow Nurse2Tech <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="post-grid" id="post-grid"></div>
       </div>
     </section>
 
@@ -146,6 +179,20 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202610011858"></script>
+  <script>
+    fetch("posts.json", { cache: "no-store" }).then((r) => r.json()).then((d) => {
+      const esc = (x) => String(x ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+      const posts = (d.posts || []).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      if (!posts.length) { document.getElementById("posts").hidden = true; return; }
+      document.getElementById("post-grid").innerHTML = posts.map((p) => `
+        <a class="post-card" href="${esc(p.url)}" target="_blank" rel="noopener">
+          <span class="post-meta"><span class="tag">${esc(p.type)}</span>${esc(new Date(p.date + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }))}</span>
+          <h3>${esc(p.title)}</h3>
+          ${p.summary ? `<p>${esc(p.summary)}</p>` : ""}
+          <span class="post-go">Read on LinkedIn →</span>
+        </a>`).join("");
+    }).catch(() => { document.getElementById("posts").hidden = true; });
+  </script>
+  <script src="script.js?v=202610020856"></script>
 </body>
 </html>

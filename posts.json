@@ -1,0 +1,33 @@
+{
+  "_help": "LinkedIn posts shown on spotlight.html under 'From our LinkedIn'. Newest first by date. type: Story, Conversation, Guide, Tips or Event.",
+  "posts": [
+    {
+      "title": "Interested in health tech but not sure where to begin? 4 practical steps",
+      "type": "Tips",
+      "date": "2026-09-23",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508571098989498368/",
+      "summary": "Figure out which roles exist, find your skill gaps, learn to position your nursing experience, and talk to nurses already doing the job."
+    },
+    {
+      "title": "N2T Spotlight: Meet Tamara",
+      "type": "Story",
+      "date": "2026-09-09",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503506429979553792/",
+      "summary": "From bedside nursing to Clinical Data Analyst at Droxi AI, and what helped her make the move."
+    },
+    {
+      "title": "So… what can nurses actually do in health tech?",
+      "type": "Guide",
+      "date": "2026-09-07",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7502773862389006336/",
+      "summary": "Clinical product, clinical AI, implementation, informatics, customer success, operations, data and solutions consulting, explained."
+    },
+    {
+      "title": "Why I started Nurse2Tech",
+      "type": "Story",
+      "date": "2026-09-02",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500984249072709632/",
+      "summary": "Esther on stepping away from the bedside, and realizing she didn't leave her nursing skills behind."
+    }
+  ]
+}

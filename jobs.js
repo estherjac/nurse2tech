@@ -23,6 +23,14 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
   const chips = document.querySelectorAll("[data-jfilter]");
   let jobs = [];
   let cat = "all";
+  let where = "all";
+  const WHERE = {
+    israel: (j) => /israel/i.test(j.location || ""),
+    remote: (j) => /remote/i.test((j.work_setting || "") + " " + (j.location || "")),
+    hybrid: (j) => /hybrid/i.test(j.work_setting || ""),
+    onsite: (j) => /on-?site/i.test(j.work_setting || ""),
+  };
+  const whereChips = document.querySelectorAll("[data-where]");
 
   const isNew = (d) => (Date.now() - new Date(d + "T00:00:00")) / 86400000 <= 7;
 
@@ -51,7 +59,7 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
       </article>`;
 
   function renderJobs() {
-    const inCat = jobs.filter((j) => cat === "all" || j.category === cat);
+    const inCat = jobs.filter((j) => (cat === "all" || j.category === cat) && (where === "all" || WHERE[where](j)));
     const open = inCat.filter((j) => !j.closed);
     const closed = inCat.filter((j) => j.closed);
     list.innerHTML = open.map((j) => card(j, false)).join("");
@@ -64,6 +72,12 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
     }
   }
 
+
+  whereChips.forEach((c) => c.addEventListener("click", () => {
+    where = c.dataset.where;
+    whereChips.forEach((x) => x.classList.toggle("active", x === c));
+    renderJobs();
+  }));
 
   chips.forEach((c) => c.addEventListener("click", () => {
     cat = c.dataset.jfilter;
@@ -80,6 +94,11 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
         const f = c.dataset.jfilter;
         if (f !== "all" && !jobs.some((x) => x.category === f)) c.hidden = true;
       });
+      whereChips.forEach((c) => {
+        const w = c.dataset.where;
+        if (w !== "all" && !jobs.some((x) => !x.closed && WHERE[w](x))) c.hidden = true;
+      });
+      document.getElementById("where-filters").hidden = jobs.length === 0;
       const want = new URLSearchParams(location.search).get("cat");
       const chip = want && [...chips].find((c) => c.dataset.jfilter === want && !c.hidden);
       if (chip) {
