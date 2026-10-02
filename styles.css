@@ -249,6 +249,20 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 .post-card p { color: var(--muted); font-size: .9rem; flex: 1; }
 .post-go { color: var(--blue); font-weight: 700; font-size: .9rem; margin-top: 4px; }
 
+/* FAQ */
+.faq-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; align-items: start; }
+.faq-head .sub a { color: var(--blue); font-weight: 700; }
+.faq-list { display: grid; gap: 10px; }
+.faq-item { border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; background: var(--white); transition: background .2s; }
+.faq-item[open] { background: var(--blue-tint); }
+.faq-item summary { cursor: pointer; font-weight: 700; font-size: 1.02rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--navy); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: var(--blue); font-weight: 800; font-size: 1.4rem; line-height: 1; flex-shrink: 0; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p { color: var(--muted); margin-top: 12px; line-height: 1.55; }
+.faq-item p a { color: var(--blue); font-weight: 600; }
+@media (max-width: 880px) { .faq-wrap { grid-template-columns: 1fr; gap: 24px; } }
+
 /* Heartbeat dividers */
 .pulse-divider { color: #b9cff5; max-width: 420px; margin: 0 auto; padding: 4px 20px; }
 .pulse-divider svg { display: block; width: 100%; height: 34px; }
