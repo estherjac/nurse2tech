@@ -1,5 +1,5 @@
 // WhatsApp community invite link (https://chat.whatsapp.com/…). WhatsApp links stay hidden until this is set.
-const WHATSAPP_URL = "";
+const WHATSAPP_URL = "https://chat.whatsapp.com/FRoOi5UtfwuJzDLx1HjB9X";
 document.querySelectorAll("[data-whatsapp]").forEach((a) => { if (WHATSAPP_URL) a.href = WHATSAPP_URL; });
 document.querySelectorAll("[data-whatsapp-block]").forEach((el) => { el.hidden = !WHATSAPP_URL; });
 
