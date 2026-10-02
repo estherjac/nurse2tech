@@ -277,6 +277,21 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 .qcard-next .qcard-quote { flex: 0; font-size: 1.25rem; }
 .qcard-sub { color: var(--muted); margin-top: 8px; flex: 1; }
 
+/* Spotlight: expandable story card */
+.qcard-story { cursor: default; }
+.qcard-story summary { list-style: none; cursor: pointer; display: flex; flex-direction: column; flex: 1; }
+.qcard-story summary::-webkit-details-marker { display: none; }
+.qcard-story .t-close, .qcard-story[open] .t-open { display: none; }
+.qcard-story[open] .t-close { display: inline; }
+.qcard-story[open] .qcard-toggle svg { transform: rotate(-90deg); }
+.qcard-story[open] { grid-column: 1 / -1; }
+.qcard-body { margin-top: 22px; padding-top: 22px; border-top: 1px solid #d6e4fb; display: grid; grid-template-columns: 1.2fr .8fr; gap: 30px; align-items: start; }
+.qcard-body .sub { max-width: none; margin: 0; }
+.qcard-body { grid-template-rows: auto 1fr; }
+.qcard-body .card-link { grid-column: 1; margin-top: 0; align-self: start; }
+.qcard-body .spot-steps { grid-row: span 2; }
+@media (max-width: 880px) { .qcard-body { grid-template-columns: 1fr; } .qcard-body .spot-steps { grid-row: auto; } }
+
 /* Tamara photos */
 .story-photo-img { object-fit: cover; padding: 0; }
 .spot-title { display: flex; align-items: center; gap: 18px; }
