@@ -249,6 +249,34 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 .post-card p { color: var(--muted); font-size: .9rem; flex: 1; }
 .post-go { color: var(--blue); font-weight: 700; font-size: .9rem; margin-top: 4px; }
 
+/* Home: slim 4-step roadmap */
+.section.steps-section { padding: 56px 0; }
+.steps-head { margin-bottom: 22px; }
+.steps-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; counter-reset: none; }
+.steps a { display: grid; grid-template-columns: 34px 1fr; column-gap: 12px; row-gap: 2px; align-items: start; height: 100%; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); transition: border-color .2s, transform .2s, box-shadow .2s; }
+.steps a:hover { border-color: var(--blue); transform: translateY(-2px); box-shadow: var(--shadow); }
+.step-n { grid-row: span 2; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--blue); color: var(--white); font-weight: 800; font-size: .95rem; }
+.steps b { font-size: 1rem; color: var(--navy); }
+.steps a > span:last-child { color: var(--muted); font-size: .88rem; }
+@media (max-width: 1024px) { .steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
+
+/* Spotlight quote cards (option C) */
+.story-cards { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.qcard { display: flex; flex-direction: column; background: var(--blue-soft); border-radius: 24px; padding: 28px; transition: transform .2s, box-shadow .2s; }
+.qcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.qcard-quote { font-size: 1.08rem; font-weight: 700; line-height: 1.45; color: var(--navy); flex: 1; }
+.qcard-quote::before { content: "“"; display: block; font-size: 3rem; line-height: .6; color: var(--blue); margin-bottom: 10px; font-weight: 800; }
+.qcard-who { display: flex; align-items: center; gap: 14px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #d6e4fb; }
+.qcard-who img { width: 58px; height: 58px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); flex-shrink: 0; }
+.qcard-who b { display: block; color: var(--navy); }
+.qcard-who span { color: var(--muted); font-size: .88rem; }
+.qcard .card-link { margin-top: 16px; }
+.qcard-next { background: var(--white); border: 2px dashed #c9dbf8; }
+.qcard-next .qcard-quote { flex: 0; font-size: 1.25rem; }
+.qcard-sub { color: var(--muted); margin-top: 8px; flex: 1; }
+
 /* Tamara photos */
 .story-photo-img { object-fit: cover; padding: 0; }
 .spot-title { display: flex; align-items: center; gap: 18px; }
