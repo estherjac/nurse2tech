@@ -1,5 +1,5 @@
 {
-  "_help": "Events shown on events.html. Add one object per event; past events move to the 'Past events' list automatically. date: YYYY-MM-DD. format: Virtual or In person. url: registration link (optional). host: \"n2t\" for events Nurse2Tech hosts, \"external\" for events we find and recommend.",
+  "_help": "Events shown on events.html. Add one object per event; past events move to the 'Past events' list automatically. date: YYYY-MM-DD. format: Virtual or In person. url: registration link (optional).",
   "_example": {
     "title": "Coffee chat: Nurses in product management",
     "date": "2026-10-20",
@@ -17,8 +17,7 @@
       "format": "Virtual",
       "location": "Webinar hosted by C8 Health",
       "description": "A panel of nurse leaders on evaluating clinical AI, where it makes a real impact, and why nurses need a seat at the table.",
-      "url": "https://lnkd.in/dw9tQYdH",
-      "host": "external"
+      "url": "https://lnkd.in/dw9tQYdH"
     },
     {
       "title": "ZIONOVATE 2026: Medical Innovation Conference",
@@ -27,8 +26,7 @@
       "format": "In person",
       "location": "Bnai Zion Medical Center, Haifa · Hebrew · Free",
       "description": "From clinical need to working tech: sessions on implementing AI in hospitals, hospital staff presenting tools they built, a clinical prompting mini-workshop, and networking with startups, innovation leaders and investors.",
-      "url": "https://conference2026.zionovate.co.il/",
-      "host": "external"
+      "url": "https://conference2026.zionovate.co.il/"
     }
   ]
 }

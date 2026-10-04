@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202610042010">
+  <link rel="stylesheet" href="styles.css?v=202610042001">
 </head>
 <body>
 
@@ -90,28 +90,19 @@
   </header>
 
   <main>
-    <section class="apply-hero hero-centered">
+    <section class="apply-hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
       <div class="container">
         <p class="eyebrow">Events</p>
-        <h1>Events for nurses <span class="accent">in health tech.</span></h1>
-        <p class="lead">Events we host, and events we find worth your time: conferences, webinars and meetups for nurses moving into tech.</p>
-        <div class="ev-legend">
-          <span class="ev-badge ev-n2t">Hosted by Nurse2Tech</span>
-          <span class="ev-badge ev-ext">Event we recommend</span>
-        </div>
+        <h1>Learn with nurses <span class="accent">already in tech.</span></h1>
+        <p class="lead">Coffee chats, panels and hands-on workshops, mostly virtual, so you can join from anywhere, even after a shift.</p>
       </div>
     </section>
 
     <section class="section jobs-section">
       <div class="container">
-      <div class="ev-wrap">
-        <div class="ev-head">
+        <div class="section-head">
           <h2>Upcoming events</h2>
-          <div class="filters ev-filters">
-            <button class="chip active" data-host="all">All</button>
-            <button class="chip" data-host="n2t">Hosted by Nurse2Tech</button>
-            <button class="chip" data-host="external">Events we recommend</button>
-          </div>
         </div>
         <div class="event-list" id="upcoming"></div>
         <div class="job-empty" id="upcoming-empty" hidden>
@@ -125,13 +116,12 @@
           <div class="event-list event-past" id="past"></div>
         </div>
       </div>
-      </div>
     </section>
 
     <section class="section section-tint">
       <div class="container">
         <div class="section-head">
-          <h2>What to expect at Nurse2Tech events</h2>
+          <h2>What to expect</h2>
         </div>
         <div class="cards cards-3">
           <article class="card">
@@ -211,12 +201,11 @@
       const card = (e, past) => {
         const d = new Date(e.date + "T00:00:00");
         const month = d.toLocaleString("en-US", { month: "short" });
-        const ours = e.host === "n2t";
         return `
-          <article class="event${ours ? " event-n2t" : ""}">
+          <article class="event">
             <div class="event-date"><span>${esc(month)}</span><b>${d.getDate()}</b></div>
             <div class="event-main">
-              <div class="res-tags"><span class="ev-badge ${ours ? "ev-n2t" : "ev-ext"}">${ours ? "Hosted by Nurse2Tech" : "Event we recommend"}</span><span class="tag">${esc(e.format)}</span>${e.time ? `<span class="tag tag-paid">${esc(e.time)}</span>` : ""}</div>
+              <div class="res-tags"><span class="tag">${esc(e.format)}</span>${e.time ? `<span class="tag tag-paid">${esc(e.time)}</span>` : ""}</div>
               <h3>${esc(e.title)}</h3>
               ${e.location ? `<p class="job-co"><svg><use href="#i-pin"/></svg> ${esc(e.location)}</p>` : ""}
               ${e.description ? `<p class="job-desc">${esc(e.description)}</p>` : ""}
@@ -231,24 +220,12 @@
         .then((data) => {
           const today = new Date().toISOString().slice(0, 10);
           const all = data.events || [];
-          let host = "all";
-          const draw = () => {
-            const pick = (e) => host === "all" || (e.host || "external") === host;
-            const upcoming = all.filter((e) => e.date >= today && pick(e)).sort((a, b) => a.date.localeCompare(b.date));
-            const past = all.filter((e) => e.date < today && pick(e)).sort((a, b) => b.date.localeCompare(a.date));
-            document.getElementById("upcoming").innerHTML = upcoming.map((e) => card(e, false)).join("");
-            const empty = document.getElementById("upcoming-empty");
-            empty.hidden = upcoming.length > 0;
-            empty.querySelector("h3").textContent = host === "n2t" ? "Our next Nurse2Tech event is being planned" : "New events are being scheduled";
-            document.getElementById("past").innerHTML = past.map((e) => card(e, true)).join("");
-            document.getElementById("past-wrap").hidden = past.length === 0;
-          };
-          document.querySelectorAll("[data-host]").forEach((c) => c.addEventListener("click", () => {
-            host = c.dataset.host;
-            document.querySelectorAll("[data-host]").forEach((x) => x.classList.toggle("active", x === c));
-            draw();
-          }));
-          draw();
+          const upcoming = all.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+          const past = all.filter((e) => e.date < today).sort((a, b) => b.date.localeCompare(a.date));
+          document.getElementById("upcoming").innerHTML = upcoming.map((e) => card(e, false)).join("");
+          document.getElementById("upcoming-empty").hidden = upcoming.length > 0;
+          document.getElementById("past").innerHTML = past.map((e) => card(e, true)).join("");
+          document.getElementById("past-wrap").hidden = past.length === 0;
         });
     }
   </script>
