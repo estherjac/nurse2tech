@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202610020945">
+  <link rel="stylesheet" href="styles.css?v=202610042001">
 </head>
 <body>
 
@@ -89,7 +89,7 @@
         <a href="index.html" class="back"><svg class="ico-sm"><use href="#i-arrow"/></svg> Back to home</a>
         <p class="eyebrow">Resources</p>
         <h1>Everything you need to <span class="accent">skill up and plug in.</span></h1>
-        <p class="lead">A curated list of courses, certifications, free tools and communities for nurses moving into health tech. Start with what's free, then invest where it counts.</p>
+        <p class="lead">The resources we recommend most for nurses moving into health tech. Filter by step, or show only what's free.</p>
       </div>
     </section>
 
@@ -97,11 +97,11 @@
       <div class="container">
         <div class="res-bar">
           <div class="filters" role="tablist" aria-label="Filter resources">
-            <button class="chip active" data-rfilter="all">All</button>
-            <button class="chip" data-rfilter="cert">Certifications</button>
-            <button class="chip" data-rfilter="course">Courses</button>
-            <button class="chip" data-rfilter="tool">Free tools</button>
-            <button class="chip" data-rfilter="community">Communities</button>
+            <button class="chip active" data-step="all">All</button>
+            <button class="chip" data-step="explore">Explore</button>
+            <button class="chip" data-step="learn">Learn</button>
+            <button class="chip" data-step="get-certified">Get certified</button>
+            <button class="chip" data-step="connect">Connect</button>
           </div>
           <label class="switch">
             <input type="checkbox" id="free-only">
@@ -110,135 +110,89 @@
           </label>
         </div>
 
-        <!-- FROM NURSE2TECH -->
-        <div class="res-group" data-group="n2t">
-          <div class="res-head">
-            <svg class="res-head-ico"><use href="#i-book"/></svg>
-            <div>
-              <h2>Start here</h2>
-              <p>Two resources we recommend to every nurse exploring health tech.</p>
-            </div>
-          </div>
-          <div class="res-grid">
-            <a class="res res-feature" href="https://www.linkedin.com/posts/nurse2tech_explore-himss-health-it-career-pathways-tool-activity-7502773862389006336-H_kg" target="_blank" rel="noopener" data-free>
-              <div class="res-tags"><span class="tag">Nurse2Tech guide</span><span class="tag tag-free">Free</span></div>
-              <h3>What can nurses do in health tech?</h3>
-              <p>Our guide to the roles nurses move into: clinical product, clinical AI, implementation, informatics, customer success, clinical operations, data and solutions consulting.</p>
-              <span class="res-meta">Nurse2Tech on LinkedIn <svg><use href="#i-ext"/></svg></span>
-            </a>
-            <a class="res" href="https://www.himss.org/careers/career-pathways/" target="_blank" rel="noopener" data-free>
-              <div class="res-tags"><span class="tag">Career mapping</span><span class="tag tag-free">Free</span></div>
-              <h3>HIMSS Healthcare Career Pathways</h3>
-              <p>An interactive tool mapping 50+ digital health roles across clinical, technical and business pathways.</p>
-              <span class="res-meta">HIMSS <svg><use href="#i-ext"/></svg></span>
-            </a>
-          </div>
-        </div>
-
-        <!-- CERTIFICATIONS -->
-        <div class="res-group" data-group="cert">
-          <div class="res-head">
-            <svg class="res-head-ico"><use href="#i-cert"/></svg>
-            <div>
-              <h2>Certifications</h2>
-              <p>Credentials hiring managers recognize. Check each site for current eligibility and fees.</p>
-            </div>
-          </div>
-          <div class="res-grid">
-            <a class="res" href="https://www.himss.org/" target="_blank" rel="noopener">
-              <div class="res-tags"><span class="tag">Health IT</span><span class="tag tag-paid">Paid</span></div>
-              <h3>CAHIMS</h3>
-              <p>Entry-level health IT certification from HIMSS with no work-experience requirement. A great first credential.</p>
-              <span class="res-meta">HIMSS · Beginner <svg><use href="#i-ext"/></svg></span>
-            </a>
-          </div>
-        </div>
-
-        <!-- COURSES -->
-        <div class="res-group" data-group="course">
-          <div class="res-head">
-            <svg class="res-head-ico"><use href="#i-book"/></svg>
-            <div>
-              <h2>Courses</h2>
-              <p>Build the skills that show up in job postings, at your own pace.</p>
-            </div>
-          </div>
-          <div class="res-grid">
-            <a class="res" href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" rel="noopener">
-              <div class="res-tags"><span class="tag">UX</span><span class="tag tag-paid">Paid · aid available</span></div>
-              <h3>Google UX Design Certificate</h3>
-              <p>A beginner-friendly program covering research, wireframes and prototypes. You finish with portfolio projects.</p>
-              <span class="res-meta">Coursera · Beginner <svg><use href="#i-ext"/></svg></span>
-            </a>
-            <a class="res" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener">
-              <div class="res-tags"><span class="tag">Data</span><span class="tag tag-paid">Paid · aid available</span></div>
-              <h3>Google Data Analytics Certificate</h3>
-              <p>Spreadsheets, SQL, Tableau and R basics, framed around real analysis projects.</p>
-              <span class="res-meta">Coursera · Beginner <svg><use href="#i-ext"/></svg></span>
-            </a>
-            <a class="res" href="https://www.coursera.org/professional-certificates/google-project-management" target="_blank" rel="noopener">
-              <div class="res-tags"><span class="tag">Project mgmt</span><span class="tag tag-paid">Paid · aid available</span></div>
-              <h3>Google Project Management Certificate</h3>
-              <p>Covers Agile and traditional project management. Pairs well with implementation roles.</p>
-              <span class="res-meta">Coursera · Beginner <svg><use href="#i-ext"/></svg></span>
-            </a>
-            <a class="res" href="https://www.coursera.org/search?query=health%20informatics" target="_blank" rel="noopener" data-free>
-              <div class="res-tags"><span class="tag">Informatics</span><span class="tag tag-free">Free to audit</span></div>
-              <h3>Health informatics courses</h3>
-              <p>University-led courses on EHRs, clinical data and interoperability. Many can be audited free.</p>
-              <span class="res-meta">Coursera · Beginner <svg><use href="#i-ext"/></svg></span>
-            </a>
-            <a class="res" href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank" rel="noopener" data-free>
-              <div class="res-tags"><span class="tag">Data</span><span class="tag tag-free">Free</span></div>
-              <h3>Intro to SQL</h3>
-              <p>Learn to query databases in bite-sized, interactive lessons. SQL comes up in almost every data role.</p>
-              <span class="res-meta">Khan Academy · Beginner <svg><use href="#i-ext"/></svg></span>
-            </a>
-          </div>
-        </div>
-
-        <!-- TOOLS -->
-        <div class="res-group" data-group="tool">
-          <div class="res-head">
-            <svg class="res-head-ico"><use href="#i-tool"/></svg>
-            <div>
-              <h2>Free tools</h2>
-              <p>Tools tech teams use every day. Try them now so they're familiar on day one.</p>
-            </div>
-          </div>
-          <div class="res-grid">
-            <a class="res" href="https://learning.linkedin.com/" target="_blank" rel="noopener" data-free>
-              <div class="res-tags"><span class="tag">Learning</span><span class="tag tag-free">Often free via library</span></div>
-              <h3>LinkedIn Learning</h3>
-              <p>Thousands of short courses. Many public libraries give free access with a library card.</p>
-              <span class="res-meta">Video courses <svg><use href="#i-ext"/></svg></span>
-            </a>
-          </div>
-        </div>
-
-        <!-- COMMUNITIES -->
-        <div class="res-group" data-group="community">
-          <div class="res-head">
-            <svg class="res-head-ico"><use href="#i-people"/></svg>
-            <div>
-              <h2>Communities</h2>
-              <p>The fastest way into health tech is through people. Join, listen, then ask.</p>
-            </div>
-          </div>
-          <div class="res-grid">
-            <a class="res res-feature" href="apply.html" data-free>
-              <div class="res-tags"><span class="tag">Nurses in tech</span><span class="tag tag-free">Free</span></div>
-              <h3>Nurse2Tech community</h3>
-              <p>Tell us the role you want. We'll connect you with a nurse who's already doing it.</p>
-              <span class="res-meta">Join now <svg><use href="#i-arrow"/></svg></span>
-            </a>
-            <a class="res" href="https://www.sonsiel.org/" target="_blank" rel="noopener">
-              <div class="res-tags"><span class="tag">Innovation</span><span class="tag tag-paid">Membership</span></div>
-              <h3>SONSIEL</h3>
-              <p>The Society of Nurse Scientists, Innovators, Entrepreneurs & Leaders, including nurse-led hackathons.</p>
-              <span class="res-meta">Nurse innovators <svg><use href="#i-ext"/></svg></span>
-            </a>
-          </div>
+        <div class="res-table-wrap">
+          <table class="res-table">
+            <thead><tr><th>Resource</th><th>From</th><th>Step</th><th>Cost</th><th><span class="sr-only">Link</span></th></tr></thead>
+            <tbody>
+            <tr class="res-row" data-step="explore" data-free>
+              <td class="rc-name"><a href="https://www.linkedin.com/posts/nurse2tech_explore-himss-health-it-career-pathways-tool-activity-7502773862389006336-H_kg" target="_blank" rel="noopener"><b>What can nurses do in health tech?</b></a><small>Our guide to the roles nurses move into</small></td>
+              <td class="rc-from" data-label="From">Nurse2Tech</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Explore</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-free">Free</span></td>
+              <td class="rc-go"><a href="https://www.linkedin.com/posts/nurse2tech_explore-himss-health-it-career-pathways-tool-activity-7502773862389006336-H_kg" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="explore" data-free>
+              <td class="rc-name"><a href="https://www.himss.org/careers/career-pathways/" target="_blank" rel="noopener"><b>HIMSS Career Pathways</b></a><small>Interactive map of 50+ digital health roles</small></td>
+              <td class="rc-from" data-label="From">HIMSS</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Explore</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-free">Free</span></td>
+              <td class="rc-go"><a href="https://www.himss.org/careers/career-pathways/" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="learn" data-free>
+              <td class="rc-name"><a href="https://www.coursera.org/search?query=health%20informatics" target="_blank" rel="noopener"><b>Health informatics courses</b></a><small>EHRs, clinical data and interoperability</small></td>
+              <td class="rc-from" data-label="From">Coursera</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Learn</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-free">Free to audit</span></td>
+              <td class="rc-go"><a href="https://www.coursera.org/search?query=health%20informatics" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="learn" data-free>
+              <td class="rc-name"><a href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank" rel="noopener"><b>Intro to SQL</b></a><small>Query databases in short interactive lessons</small></td>
+              <td class="rc-from" data-label="From">Khan Academy</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Learn</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-free">Free</span></td>
+              <td class="rc-go"><a href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="learn" data-free>
+              <td class="rc-name"><a href="https://learning.linkedin.com/" target="_blank" rel="noopener"><b>LinkedIn Learning</b></a><small>Short video courses on almost any skill</small></td>
+              <td class="rc-from" data-label="From">LinkedIn</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Learn</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-free">Often free via library</span></td>
+              <td class="rc-go"><a href="https://learning.linkedin.com/" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="learn">
+              <td class="rc-name"><a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener"><b>Google Data Analytics Certificate</b></a><small>Spreadsheets, SQL, Tableau and R</small></td>
+              <td class="rc-from" data-label="From">Coursera</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Learn</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-paid">Paid · aid available</span></td>
+              <td class="rc-go"><a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="learn">
+              <td class="rc-name"><a href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" rel="noopener"><b>Google UX Design Certificate</b></a><small>Research, wireframes and a portfolio</small></td>
+              <td class="rc-from" data-label="From">Coursera</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Learn</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-paid">Paid · aid available</span></td>
+              <td class="rc-go"><a href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="learn">
+              <td class="rc-name"><a href="https://www.coursera.org/professional-certificates/google-project-management" target="_blank" rel="noopener"><b>Google Project Management Certificate</b></a><small>Agile and traditional project management</small></td>
+              <td class="rc-from" data-label="From">Coursera</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Learn</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-paid">Paid · aid available</span></td>
+              <td class="rc-go"><a href="https://www.coursera.org/professional-certificates/google-project-management" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="get-certified">
+              <td class="rc-name"><a href="https://www.himss.org/" target="_blank" rel="noopener"><b>CAHIMS</b></a><small>Entry-level health IT certification, no experience needed</small></td>
+              <td class="rc-from" data-label="From">HIMSS</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Get certified</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-paid">Paid</span></td>
+              <td class="rc-go"><a href="https://www.himss.org/" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="connect" data-free>
+              <td class="rc-name"><a href="apply.html"><b>Nurse2Tech community</b></a><small>Get matched with a nurse in your target role</small></td>
+              <td class="rc-from" data-label="From">Nurse2Tech</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Connect</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-free">Free</span></td>
+              <td class="rc-go"><a href="apply.html">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            <tr class="res-row" data-step="connect">
+              <td class="rc-name"><a href="https://www.sonsiel.org/" target="_blank" rel="noopener"><b>SONSIEL</b></a><small>Nurse innovators, entrepreneurs and hackathons</small></td>
+              <td class="rc-from" data-label="From">SONSIEL</td>
+              <td class="rc-step" data-label="Step"><span class="step-tag">Connect</span></td>
+              <td class="rc-cost" data-label="Cost"><span class="cost-paid">Membership</span></td>
+              <td class="rc-go"><a href="https://www.sonsiel.org/" target="_blank" rel="noopener">Open <span aria-hidden="true">→</span></a></td>
+            </tr>
+            </tbody>
+          </table>
         </div>
 
         <p class="res-empty" hidden>No resources match that filter.</p>
@@ -285,32 +239,23 @@
     </div>
   </footer>
 
-  <script src="script.js?v=202610020901"></script>
+  <script src="script.js?v=202610042001"></script>
   <script>
     {
-      const chips = document.querySelectorAll("[data-rfilter]");
+      const chips = document.querySelectorAll(".res-bar [data-step]");
       const freeOnly = document.getElementById("free-only");
-      const groups = document.querySelectorAll(".res-group");
+      const rows = document.querySelectorAll(".res-row");
       const empty = document.querySelector(".res-empty");
-      let cat = "all";
-
+      let step = "all";
       function apply() {
         let shown = 0;
-        groups.forEach((g) => {
-          const catMatch = cat === "all" || g.dataset.group === cat;
-          let visible = 0;
-          g.querySelectorAll(".res").forEach((r) => {
-            const ok = catMatch && (!freeOnly.checked || r.hasAttribute("data-free"));
-            r.hidden = !ok;
-            if (ok) visible++;
-          });
-          g.hidden = visible === 0;
-          shown += visible;
+        rows.forEach((r) => {
+          const ok = (step === "all" || r.dataset.step === step) && (!freeOnly.checked || r.hasAttribute("data-free"));
+          r.hidden = !ok; if (ok) shown++;
         });
         empty.hidden = shown > 0;
       }
-
-      chips.forEach((c) => c.addEventListener("click", () => { cat = c.dataset.rfilter; apply(); }));
+      chips.forEach((c) => c.addEventListener("click", () => { step = c.dataset.step; chips.forEach((x) => x.classList.toggle("active", x === c)); apply(); }));
       freeOnly.addEventListener("change", apply);
     }
   </script>

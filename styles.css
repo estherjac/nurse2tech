@@ -320,6 +320,36 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 .faq-item p a { color: var(--blue); font-weight: 600; }
 @media (max-width: 880px) { .faq-wrap { grid-template-columns: 1fr; gap: 22px; } }
 
+/* Resources: one list (table) */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.res-table-wrap { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--white); }
+.res-table { width: 100%; border-collapse: collapse; }
+.res-table th { text-align: left; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--blue-tint); padding: 12px 18px; font-weight: 700; }
+.res-table td { padding: 14px 18px; border-top: 1px solid var(--line); vertical-align: middle; font-size: .93rem; }
+.res-row[hidden] { display: none; }
+.res-row:hover { background: var(--blue-tint); }
+.rc-name a { color: var(--navy); }
+.rc-name a:hover b { color: var(--blue); }
+.rc-name b { display: block; font-size: .98rem; }
+.rc-name small { color: var(--muted); font-size: .85rem; }
+.rc-from { color: var(--navy); white-space: nowrap; }
+.step-tag { background: var(--blue-soft); color: var(--blue); border-radius: 99px; padding: 4px 10px; font-weight: 700; font-size: .75rem; white-space: nowrap; }
+.cost-free, .cost-paid { border-radius: 99px; padding: 4px 10px; font-weight: 700; font-size: .75rem; white-space: nowrap; }
+.cost-free { background: #e5f6ec; color: #137a45; }
+.cost-paid { background: #f1f4f9; color: var(--muted); }
+.rc-go { text-align: right; white-space: nowrap; }
+.rc-go a { color: var(--blue); font-weight: 700; }
+@media (max-width: 760px) {
+  .res-table thead { display: none; }
+  .res-table, .res-table tbody, .res-row, .res-table td { display: block; width: 100%; }
+  .res-row { padding: 14px 16px; border-top: 1px solid var(--line); }
+  .res-row:first-child { border-top: 0; }
+  .res-table td { border: 0; padding: 0; }
+  .rc-name { margin-bottom: 10px; }
+  .rc-from, .rc-step, .rc-cost { display: inline-block !important; width: auto !important; margin-right: 8px; font-size: .85rem; }
+  .rc-go { text-align: left; margin-top: 10px; }
+}
+
 /* Heartbeat dividers */
 .pulse-divider { color: #b9cff5; max-width: 420px; margin: 0 auto; padding: 4px 20px; }
 .pulse-divider svg { display: block; width: 100%; height: 34px; }

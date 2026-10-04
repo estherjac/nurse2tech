@@ -154,7 +154,7 @@ if (topicSel) {
 const statRes = document.getElementById("stat-resources");
 if (statRes) {
   fetch("resources.html", { cache: "no-store" }).then((r) => r.text()).then((h) => {
-    const n = (h.match(/<a class="res[ "]/g) || []).length;
+    const n = (h.match(/class="res-row"/g) || []).length;
     if (n) statRes.textContent = n;
   }).catch(() => {});
 }
