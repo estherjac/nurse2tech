@@ -2,6 +2,13 @@
   "_help": "LinkedIn posts shown on spotlight.html under 'From our LinkedIn'. Newest first by date. type: Story, Conversation, Guide, Tips or Event.",
   "posts": [
     {
+      "title": "N2T Spotlight: Meet Olga",
+      "type": "Story",
+      "date": "2026-10-05",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512895127267491840/",
+      "summary": "From the ER to Amazon to digital health, and how learning to tell her story in business language opened doors."
+    },
+    {
       "title": "Interested in health tech but not sure where to begin? 4 practical steps",
       "type": "Tips",
       "date": "2026-09-23",

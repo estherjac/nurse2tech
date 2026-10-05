@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202610042001">
+  <link rel="stylesheet" href="styles.css?v=202610051843">
 </head>
 <body>
 
@@ -76,7 +76,7 @@
   </header>
 
   <main>
-    <section class="apply-hero">
+    <section class="apply-hero hero-centered">
       <div class="container">
         <p class="eyebrow">N2T Spotlight</p>
         <h1>Nurses who <span class="accent">made the move.</span></h1>
@@ -89,6 +89,29 @@
     <section class="section spot-stories">
       <div class="container">
         <div class="story-cards">
+          <details class="qcard qcard-story" id="olga">
+            <summary>
+              <p class="qcard-quote">Once I learned to tell my story in their language, the doors opened.</p>
+              <div class="qcard-who">
+                <img src="assets/olga.jpg?v=20261005" alt="Olga" width="400" height="400">
+                <div><b>Olga</b><span>ER nurse → Digital Health Lead, Tzafon Medical Center</span></div>
+              </div>
+              <span class="card-link qcard-toggle"><span class="t-open">Read her story</span><span class="t-close">Close</span> <svg class="ico-sm"><use href="#i-arrow"/></svg></span>
+            </summary>
+            <div class="qcard-body">
+              <p class="sub">Olga started in the emergency department at Tel Aviv Sourasky Medical Center (Ichilov), where two years taught her to think fast and prioritise under pressure. Her first step away from the bedside was a care coordinator role at an ACO, then business development. She earned an MBA at the University of Michigan and spent five years in leadership roles at Amazon, moving from vendor management to product management in health to program management. The hardest part was translating her nursing experience into business language. After 11 years in the U.S., she moved back to Israel and is now a digital health lead at Tzafon Medical Center. Her advice: learn the language of business and data, and don't discount your nursing experience. "It's your edge, not your gap."</p>
+              <div class="spot-steps">
+          <h3>Her path</h3>
+          <ol class="timeline">
+            <li><b>ER nurse</b><span>Tel Aviv Sourasky Medical Center (Ichilov)</span></li>
+            <li><b>Care coordinator, then business development</b><span>Value-based care at an ACO</span></li>
+            <li><b>MBA and Amazon</b><span>University of Michigan; five years in leadership roles</span></li>
+            <li><b>Digital Health Lead</b><span>Tzafon Medical Center</span></li>
+          </ol>
+        </div>
+              <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7512895127267491840/" target="_blank" rel="noopener">Read Olga's full story on LinkedIn <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+            </div>
+          </details>
           <details class="qcard qcard-story" id="tamara">
             <summary>
               <p class="qcard-quote">I didn't get here because I had a traditional technical background. I got here by combining clinical knowledge with curiosity.</p>
@@ -175,7 +198,7 @@
   </footer>
 
   <script>
-    if (location.hash === "#tamara") { const t = document.getElementById("tamara"); if (t) t.open = true; }
+    if (location.hash) { const t = document.querySelector("details" + location.hash); if (t) t.open = true; }
     fetch("posts.json", { cache: "no-store" }).then((r) => r.json()).then((d) => {
       const esc = (x) => String(x ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
       const posts = (d.posts || []).sort((a, b) => String(b.date).localeCompare(String(a.date)));
@@ -189,7 +212,7 @@
         </a>`).join("");
     }).catch(() => { document.getElementById("posts").hidden = true; });
   </script>
-  <script src="script.js?v=202610042001"></script>
+  <script src="script.js?v=202610051843"></script>
   <script data-goatcounter="https://nurse2tech.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

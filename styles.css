@@ -350,6 +350,13 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
   .rc-go { text-align: left; margin-top: 10px; }
 }
 
+/* Page headings: centred and evenly balanced */
+.apply-hero h1, .hero h1, .section-head h2, .ev-head h2 { text-wrap: balance; }
+.apply-hero.hero-centered h1 { max-width: 1040px; }
+.hero-centered .lead { max-width: 620px; text-wrap: pretty; }
+.hero-centered .back { margin-left: auto; margin-right: auto; }
+.hero-centered .btn { margin-top: 6px; }
+
 /* Heartbeat dividers */
 .pulse-divider { color: #b9cff5; max-width: 420px; margin: 0 auto; padding: 4px 20px; }
 .pulse-divider svg { display: block; width: 100%; height: 34px; }
