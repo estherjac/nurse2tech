@@ -12,6 +12,26 @@
   },
   "jobs": [
     {
+      "title": "Clinical AI Specialist",
+      "company": "Viz.ai",
+      "location": "Tel Aviv, Israel",
+      "work_setting": "Hybrid",
+      "category": "ai",
+      "url": "https://www.linkedin.com/jobs/view/4469056852/",
+      "posted": "2026-10-05",
+      "description": "Use clinical knowledge to support AI development: working with medical data and images, reviewing AI outputs, and collaborating with clinical and technical teams. Looking for a health or medical background, experience with medical data or imaging, strong anatomy knowledge and attention to detail. Full-time."
+    },
+    {
+      "title": "Clinical Education Specialist",
+      "company": "Alma Lasers",
+      "location": "Shoham, Israel",
+      "work_setting": "On-site",
+      "category": "implementation",
+      "url": "https://www.linkedin.com/jobs/view/4427510759/",
+      "posted": "2026-10-05",
+      "description": "Train customers on medical devices, provide clinical support and help with clinical research. Looking for a registered nurse (or relevant clinical/science background) with strong communication and training skills. Fluent Hebrew and English and a valid driver's license required. Full-time."
+    },
+    {
       "title": "Clinical Project Manager",
       "company": "Immunai",
       "location": "Ramat Gan, Israel",
