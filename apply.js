@@ -28,12 +28,6 @@ const FORM_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
     });
     if (firstBad) return showError("Please fill in the highlighted fields.", firstBad), false;
 
-    const rolesGroup = document.getElementById("roles-group");
-    if (!form.querySelector('input[name="roles"]:checked')) {
-      rolesGroup.classList.add("invalid");
-      rolesGroup.scrollIntoView({ block: "center" });
-      return showError("Pick at least one role you're interested in."), false;
-    }
     if (!form.consent.checked) return showError("Please agree to be contacted so we can follow up.", form.consent), false;
     return true;
   }
