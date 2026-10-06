@@ -711,7 +711,10 @@ h2 .accent, h2 .accent-light { color: inherit; }
 /* About: mission */
 .hero-centered .container { text-align: center; }
 .hero-centered h1, .hero-centered .lead { margin-inline: auto; }
-.mission .sub { max-width: 760px; }
+.mission { display: grid; grid-template-columns: 260px minmax(0, 700px); column-gap: 64px; align-items: start; }
+.mission h2 { grid-column: 1; grid-row: 1 / span 3; font-size: 2rem; line-height: 1.15; margin: 0; }
+.mission .sub { grid-column: 2; max-width: none; }
+.mission .sub:first-of-type { margin-top: 0; }
 .mission .sub + .sub { margin-top: 18px; }
 .section.about-mission { padding-top: 30px; }
 
@@ -722,11 +725,14 @@ h2 .accent, h2 .accent-light { color: inherit; }
 .spot-steps { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
 .spot-steps h3 { margin-bottom: 18px; }
 .story { max-width: 760px; }
-.story.story-with-photo { max-width: none; display: grid; grid-template-columns: 260px minmax(0, 700px); gap: 64px; align-items: center; }
+.story.story-with-photo { max-width: none; display: grid; grid-template-columns: 260px minmax(0, 700px); gap: 64px; align-items: start; }
 .story-photo { width: 260px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: #e8f1ff; border: 6px solid var(--white); box-shadow: 0 0 0 1px var(--line), 0 20px 50px -24px rgba(11, 31, 92, .35); }
 .story-photo img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 880px) {
   .story.story-with-photo { grid-template-columns: 1fr; gap: 28px; justify-items: center; }
+  .mission { grid-template-columns: 1fr; }
+  .mission h2 { grid-row: auto; margin-bottom: 14px; }
+  .mission h2, .mission .sub { grid-column: 1; }
   .story-photo { width: 170px; }
 }
 .story .sub { max-width: none; }
