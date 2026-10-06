@@ -708,8 +708,8 @@ h2 .accent, h2 .accent-light { color: inherit; }
 /* About: mission */
 .hero-centered .container { text-align: center; }
 .hero-centered h1, .hero-centered .lead { margin-inline: auto; }
-.mission { max-width: 760px; text-align: center; }
-.mission .sub { max-width: none; margin-inline: auto; }
+.mission { max-width: 760px; }
+.mission .sub { max-width: none; }
 .mission .sub + .sub { margin-top: 18px; }
 .section.about-mission { padding-top: 30px; }
 
