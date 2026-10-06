@@ -716,6 +716,8 @@ h2 .accent, h2 .accent-light { color: inherit; }
 .mission .sub { grid-column: 2; max-width: none; }
 .mission .sub:first-of-type { margin-top: 0; }
 .mission .sub + .sub { margin-top: 18px; }
+.wa-card .wa-ico { width: 34px; height: 34px; color: #25d366; margin-bottom: 10px; }
+.wa-card .btn { margin-top: 14px; }
 .section.about-mission { padding-top: 30px; }
 
 /* Spotlight & story */
