@@ -38,6 +38,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
   color: var(--muted); margin-bottom: 14px;
 }
 .eyebrow-light { color: #9cc0ff; }
+.crumbs a { color: var(--muted); opacity: .7; transition: color .15s, opacity .15s; }
+.crumbs a:hover { color: var(--blue); opacity: 1; }
+.crumbs [aria-hidden] { opacity: .45; }
 .eyebrow-light::before { background: #6ea2ff; }
 
 h1, h2, h3 { line-height: 1.1; letter-spacing: -0.025em; font-weight: 800; }
