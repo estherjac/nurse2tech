@@ -382,6 +382,18 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 .event-bar-inner { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 10px 0; flex-wrap: wrap; text-align: center; }
 .event-bar a { color: #9cc0ff; font-weight: 700; }
 .event-bar button { background: none; border: 0; color: #c7d5f3; font-size: 1.2rem; cursor: pointer; line-height: 1; }
+.event-bar .ev-short { display: none; }
+@media (max-width: 640px) {
+  .event-bar { font-size: .82rem; }
+  .event-bar-inner { flex-wrap: nowrap; justify-content: space-between; gap: 10px; padding: 6px 0; text-align: left; }
+  .event-bar .ev-text { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .event-bar .ev-long, .event-bar .ev-time { display: none; }
+  .event-bar .ev-short { display: inline; }
+  .event-bar a { white-space: nowrap; padding: 8px 0; }
+  .event-bar button { width: 32px; height: 32px; margin-right: -8px; flex: none; }
+  .footer-links a, .footer-inner nav a { display: inline-block; padding: 8px 0; }
+  .rc-go a { display: inline-block; padding: 10px 0; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .hero-icons svg, .footer-icons svg { animation: none !important; }

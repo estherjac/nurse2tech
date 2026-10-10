@@ -191,7 +191,7 @@ fetch("events.json", { cache: "no-store" })
     const bar = document.createElement("div");
     bar.className = "event-bar";
     const safe = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-    bar.innerHTML = `<div class="container event-bar-inner"><span><b>Next event:</b> ${safe(next.title)} · ${when}${next.time ? " · " + safe(next.time) : ""}</span><a href="${safe(next.url || "events.html")}"${next.url ? ' target="_blank" rel="noopener"' : ""}>Register →</a><button type="button" aria-label="Hide event banner">×</button></div>`;
+    bar.innerHTML = `<div class="container event-bar-inner"><span class="ev-text"><b><span class="ev-long">Next event:</span><span class="ev-short">Next:</span></b> <span class="ev-long">${safe(next.title)}</span><span class="ev-short">${safe(next.title.split(":")[0])}</span> · ${when}<span class="ev-time">${next.time ? " · " + safe(next.time) : ""}</span></span><a href="${safe(next.url || "events.html")}"${next.url ? ' target="_blank" rel="noopener"' : ""}>Register →</a><button type="button" aria-label="Hide event banner">×</button></div>`;
     bar.querySelector("button").addEventListener("click", () => {
       bar.remove();
       try { sessionStorage.setItem("n2t-hide-event", next.title); } catch (e) {}
