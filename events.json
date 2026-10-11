@@ -39,6 +39,16 @@
       "description": "The Israeli Society for HealthTech's 3rd summit, with 400+ clinicians, health system leaders, startups and investors. Sessions on bringing AI into real clinical settings, plus leaders from Sheba, Ichilov, Maccabi and Clalit.",
       "url": "https://www.isoh-tech2026.org/",
       "cost": "₪550 (member discount)"
+    },
+    {
+      "title": "Rambam Tomorrow: Innovation Summit on the Medicine of Tomorrow",
+      "date": "2026-10-14",
+      "time": "09:00–13:15",
+      "format": "In person",
+      "location": "Health Discovery Tower, Rambam Health Care Campus, Haifa · Hebrew",
+      "description": "Rambam and ynet's first innovation summit in the north: 4 panels, 4 short TED-style talks and 20+ speakers from medicine, tech and industry on how AI and innovation are already changing care. Places are limited; registration needs approval.",
+      "url": "https://rambam-tomorrow.com/",
+      "cost": "Free"
     }
   ]
 }
