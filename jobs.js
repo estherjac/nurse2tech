@@ -61,7 +61,9 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
   function renderJobs() {
     const inCat = jobs.filter((j) => (cat === "all" || j.category === cat) && (where === "all" || WHERE[where](j)));
     const open = inCat.filter((j) => !j.closed);
-    const closed = inCat.filter((j) => j.closed);
+    // Most recently closed first; a job with no known close date sorts by when it was posted
+    const closedOn = (j) => String(j.closed_date || j.posted);
+    const closed = inCat.filter((j) => j.closed).sort((a, b) => closedOn(b).localeCompare(closedOn(a)));
     list.innerHTML = open.map((j) => card(j, false)).join("");
     const closedWrap = document.getElementById("closed-wrap");
     document.getElementById("closed-list").innerHTML = closed.map((j) => card(j, true)).join("");
