@@ -81,7 +81,9 @@
       "category": "ai",
       "url": "https://www.linkedin.com/jobs/view/4470273712/",
       "posted": "2026-09-24",
-      "description": "Review and classify clinical data used to train AI models, working closely with the AI team. A great entry point for nurses who want to apply clinical knowledge in AI."
+      "description": "Review and classify clinical data used to train AI models, working closely with the AI team. A great entry point for nurses who want to apply clinical knowledge in AI.",
+      "closed": true,
+      "closed_date": "2026-10-22"
     },
     {
       "title": "Robotic Startup Specialist",
