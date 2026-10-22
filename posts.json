@@ -2,6 +2,13 @@
   "_help": "LinkedIn posts shown on spotlight.html under 'From our LinkedIn'. Newest first by date. type: Story, Conversation, Guide, Tips or Event.",
   "posts": [
     {
+      "title": "N2T Insights #1 | Getting Your Foot in the Door",
+      "type": "Conversation",
+      "date": "2026-10-22",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519047164237606912/",
+      "summary": "A conversation with Sergey Vasilenko on what it takes for nurses to make the transition: translating your skills, getting your foot in the door, and networking."
+    },
+    {
       "title": "N2T Spotlight: Meet Olga",
       "type": "Story",
       "date": "2026-10-05",
