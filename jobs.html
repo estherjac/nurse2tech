@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202610271431">
+  <link rel="stylesheet" href="styles.css?v=202610271439">
 </head>
 <body>
 
@@ -89,24 +89,27 @@
     <!-- FEATURED -->
     <section class="section jobs-section jobs-list-section" id="featured">
       <div class="container">
-        <div class="filters" id="job-filters">
-          <button class="chip active" data-jfilter="all">All</button>
-          <button class="chip" data-jfilter="informatics">Informatics</button>
-          <button class="chip" data-jfilter="product">Product</button>
-          <button class="chip" data-jfilter="ux">UX</button>
-          <button class="chip" data-jfilter="implementation">Implementation</button>
-          <button class="chip" data-jfilter="success">Clinical success</button>
-          <button class="chip" data-jfilter="ai">Clinical AI</button>
-          <button class="chip" data-jfilter="operations">Clinical operations</button>
-          <button class="chip" data-jfilter="data">Data</button>
-        </div>
-        <div class="filters filters-where" id="where-filters">
-          <span class="filter-label">Where</span>
-          <button class="chip active" data-where="all">Anywhere</button>
-          <button class="chip" data-where="israel">Israel</button>
-          <button class="chip" data-where="remote">Remote</button>
-          <button class="chip" data-where="hybrid">Hybrid</button>
-          <button class="chip" data-where="onsite">On-site</button>
+        <div class="job-filterbar">
+          <div class="jtabs" id="job-filters" aria-label="Role type">
+            <button class="jtab active" data-jfilter="all">All</button>
+            <button class="jtab" data-jfilter="informatics">Informatics</button>
+            <button class="jtab" data-jfilter="product">Product</button>
+            <button class="jtab" data-jfilter="ux">UX</button>
+            <button class="jtab" data-jfilter="implementation">Implementation</button>
+            <button class="jtab" data-jfilter="success">Clinical success</button>
+            <button class="jtab" data-jfilter="ai">Clinical AI</button>
+            <button class="jtab" data-jfilter="operations">Clinical operations</button>
+            <button class="jtab" data-jfilter="data">Data</button>
+          </div>
+          <label class="jwhere" id="where-filters"><span>Where</span>
+            <select id="where-select">
+              <option value="all">Anywhere</option>
+              <option value="israel">Israel</option>
+              <option value="remote">Remote</option>
+              <option value="hybrid">Hybrid</option>
+              <option value="onsite">On-site</option>
+            </select>
+          </label>
         </div>
         <div class="job-list" id="job-list"></div>
         <div class="job-empty" id="job-empty" hidden>
@@ -233,7 +236,7 @@
   </footer>
 
   <script src="script.js?v=202610271423"></script>
-  <script src="jobs.js?v=20261022111440"></script>
+  <script src="jobs.js?v=202610271439"></script>
   <script data-goatcounter="https://nurse2tech.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

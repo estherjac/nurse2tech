@@ -624,6 +624,24 @@ main > .apply-hero ~ section:nth-of-type(2) { padding-top: 56px; }
 
 /* Job board */
 .filters[hidden] { display: none; }
+/* Jobs: role type tabs + "Where" dropdown */
+.job-filterbar { display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; flex-wrap: wrap; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+.job-filterbar:not(:has(> :not([hidden]))) { display: none; }
+.jtabs { display: flex; gap: 4px 26px; flex-wrap: wrap; }
+.jtabs[hidden], .jwhere[hidden] { display: none; }
+.jtab { background: none; border: 0; padding: 12px 0; margin-bottom: -1px; font: inherit; font-weight: 600; color: var(--muted); border-bottom: 2.5px solid transparent; cursor: pointer; transition: color .15s, border-color .15s; }
+.jtab:hover { color: var(--navy); }
+.jtab.active { color: var(--navy); border-color: var(--blue); }
+.jwhere { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px; padding: 6px 8px 6px 18px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--white); font-size: .9rem; font-weight: 600; color: var(--muted); }
+.jwhere select { border: 0; border-radius: 999px; padding: 7px 14px; background: var(--blue-soft); font: inherit; font-weight: 700; color: var(--navy); cursor: pointer; }
+@media (max-width: 600px) {
+  .jtabs { flex-wrap: nowrap; overflow-x: auto; width: 100%; scrollbar-width: none; }
+  .jtab { white-space: nowrap; }
+  .job-filterbar { border-bottom: 0; }
+  .jtabs { border-bottom: 1px solid var(--line); }
+  .jwhere { margin-bottom: 0; }
+}
+
 .job-search { display: flex; gap: 10px; margin-top: 34px; max-width: 860px; background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 10px; box-shadow: var(--shadow); }
 .job-search-field { flex: 1.4; display: flex; align-items: center; gap: 10px; padding: 0 14px; border-radius: 12px; background: var(--blue-tint); }
 .job-search-loc { flex: 1; }

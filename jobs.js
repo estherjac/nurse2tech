@@ -30,7 +30,7 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
     hybrid: (j) => /hybrid/i.test(j.work_setting || ""),
     onsite: (j) => /on-?site/i.test(j.work_setting || ""),
   };
-  const whereChips = document.querySelectorAll("[data-where]");
+  const whereSelect = document.getElementById("where-select");
 
   const isNew = (d) => (Date.now() - new Date(d + "T00:00:00")) / 86400000 <= 7;
 
@@ -75,14 +75,14 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
   }
 
 
-  whereChips.forEach((c) => c.addEventListener("click", () => {
-    where = c.dataset.where;
-    whereChips.forEach((x) => x.classList.toggle("active", x === c));
+  whereSelect.addEventListener("change", () => {
+    where = whereSelect.value;
     renderJobs();
-  }));
+  });
 
   chips.forEach((c) => c.addEventListener("click", () => {
     cat = c.dataset.jfilter;
+    chips.forEach((x) => x.classList.toggle("active", x === c));
     renderJobs();
   }));
 
@@ -96,9 +96,8 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
         const f = c.dataset.jfilter;
         if (f !== "all" && !jobs.some((x) => x.category === f)) c.hidden = true;
       });
-      whereChips.forEach((c) => {
-        const w = c.dataset.where;
-        if (w !== "all" && !jobs.some((x) => !x.closed && WHERE[w](x))) c.hidden = true;
+      [...whereSelect.options].forEach((o) => {
+        if (o.value !== "all" && !jobs.some((x) => !x.closed && WHERE[o.value](x))) o.remove();
       });
       document.getElementById("where-filters").hidden = jobs.length === 0;
       const want = new URLSearchParams(location.search).get("cat");
