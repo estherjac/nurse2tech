@@ -219,7 +219,7 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 @media (max-width: 600px) { .quiz, .quiz-result { padding: 24px 18px; } }
 
 /* Home: quiz call to action */
-.section.quiz-cta-section { padding-top: 36px; }
+.section.quiz-cta-section { padding: 36px 0 10px; }
 .quiz-cta { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; background: var(--blue-tint); border: 1px solid var(--line); border-radius: 24px; padding: 36px 40px; }
 .quiz-cta h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
 .quiz-cta .sub { margin-top: 8px; max-width: 560px; }
@@ -269,17 +269,6 @@ h3 { font-size: 1.2rem; letter-spacing: -0.01em; font-weight: 700; }
 .post-go { color: var(--blue); font-weight: 700; font-size: .9rem; margin-top: 4px; }
 
 /* Home: slim 4-step roadmap */
-.section.steps-section { padding: 56px 0 8px; }
-.steps-head { margin-bottom: 22px; }
-.steps-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
-.steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.steps a { display: block; height: 100%; padding: 18px; border: 1px solid transparent; border-radius: 16px; background: #f6f9fe; transition: border-color .2s; }
-.steps a:hover { border-color: #d6e4fb; }
-.steps b { display: block; margin-bottom: 4px; font-size: 1rem; color: var(--navy); transition: color .2s; }
-.steps a:hover b { color: var(--blue); }
-.steps a > span:last-child { display: block; color: var(--muted); font-size: .88rem; }
-@media (max-width: 1024px) { .steps { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
 
 /* Spotlight quote cards (option C) */
 .story-cards { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
