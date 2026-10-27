@@ -25,7 +25,6 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
   let cat = "all";
   let where = "all";
   const WHERE = {
-    israel: (j) => /israel/i.test(j.location || ""),
     remote: (j) => /remote/i.test((j.work_setting || "") + " " + (j.location || "")),
     hybrid: (j) => /hybrid/i.test(j.work_setting || ""),
     onsite: (j) => /on-?site/i.test(j.work_setting || ""),
@@ -95,9 +94,6 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
       chips.forEach((c) => {
         const f = c.dataset.jfilter;
         if (f !== "all" && !jobs.some((x) => x.category === f)) c.hidden = true;
-      });
-      [...whereSelect.options].forEach((o) => {
-        if (o.value !== "all" && !jobs.some((x) => !x.closed && WHERE[o.value](x))) o.remove();
       });
       document.getElementById("where-filters").hidden = jobs.length === 0;
       const want = new URLSearchParams(location.search).get("cat");
