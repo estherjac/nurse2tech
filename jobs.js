@@ -10,7 +10,7 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
     implementation: "Clinical Implementation",
     success: "Clinical Success",
     ai: "Clinical AI / Content",
-    sales: "Sales / Solutions",
+    sales: "Clinical Sales",
     data: "Data & Analytics",
     operations: "Clinical Operations",
   };
