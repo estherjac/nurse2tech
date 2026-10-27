@@ -116,7 +116,7 @@ document.querySelectorAll("form[data-formsubmit]").forEach((f) => {
 // Home: newest three jobs from the job board
 const latestJobs = document.getElementById("latest-jobs");
 if (latestJobs) {
-  const LABELS = { informatics: "Clinical Informatics", product: "Product Management", ux: "UX Research / Design", implementation: "Clinical Implementation", success: "Clinical Success", ai: "Clinical AI", sales: "Sales / Solutions", data: "Data & Analytics", operations: "Clinical Operations" };
+  const LABELS = { informatics: "Clinical Informatics", product: "Product Management", ux: "UX Research / Design", implementation: "Clinical Implementation", success: "Clinical Success", ai: "Clinical AI", sales: "Clinical Sales", data: "Data & Analytics", operations: "Clinical Operations" };
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   fetch("jobs.json", { cache: "no-store" })
     .then((r) => r.json())
@@ -128,7 +128,9 @@ if (latestJobs) {
       const companies = [...new Set((d.jobs || []).map((j) => j.company))];
       const strip = document.getElementById("latest-companies");
       if (strip && companies.length) {
-        strip.innerHTML = `<span>Roles we've shared from</span>` + companies.map((c) => `<b>${esc(c)}</b>`).join("<i></i>");
+        const items = companies.map((c) => `<b>${esc(c)}</b><i></i>`).join("");
+        // the list is repeated so the scrolling line loops without a gap
+        strip.innerHTML = `<span>Roles we've shared from</span><div class="lc-view"><div class="lc-track">${items}<span class="lc-copy" aria-hidden="true">${items}</span></div></div>`;
         strip.hidden = false;
       }
       latestJobs.innerHTML = jobs.map((j) => `
