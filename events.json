@@ -1,5 +1,5 @@
 {
-  "_help": "Events shown on events.html. Add one object per event; past events move to the 'Past events' list automatically. date: YYYY-MM-DD. format: Virtual or In person. url: registration link (optional). cost: \"Free\" or the price, e.g. \"₪550\".",
+  "_help": "Events shown on events.html. Add one object per event; past events move to the 'Past events' list automatically. date: YYYY-MM-DD. format: Virtual or In person. url: registration link (optional). cost: \"Free\" or the price, e.g. \"₪550\". For events Nurse2Tech hosts itself, add host: \"n2t\" — only those show in the banner at the top of every page.",
   "_example": {
     "title": "Coffee chat: Nurses in product management",
     "date": "2026-10-20",

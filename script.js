@@ -179,12 +179,12 @@ if (statNums.length && "IntersectionObserver" in window && !matchMedia("(prefers
   statNums.forEach((el) => io.observe(el));
 }
 
-// "Next event" banner: shows on every page only when an upcoming event exists
+// "Next event" banner: shows on every page only for upcoming events Nurse2Tech hosts (host: "n2t" in events.json)
 fetch("events.json", { cache: "no-store" })
   .then((r) => r.json())
   .then((d) => {
     const today = new Date().toISOString().slice(0, 10);
-    const next = (d.events || []).filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date))[0];
+    const next = (d.events || []).filter((e) => e.date >= today && e.host === "n2t").sort((a, b) => a.date.localeCompare(b.date))[0];
     if (!next) return;
     try { if (sessionStorage.getItem("n2t-hide-event") === next.title) return; } catch (e) {}
     const when = new Date(next.date + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
