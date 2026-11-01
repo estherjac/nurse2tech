@@ -624,7 +624,9 @@ main > .apply-hero ~ section:nth-of-type(2) { padding-top: 56px; }
 .jwhere select { -webkit-appearance: none; appearance: none; border: 0; border-radius: 999px; padding: 7px 34px 7px 16px; font: inherit; font-weight: 700; color: var(--navy); cursor: pointer;
   background: var(--blue-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%230b1f5c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 14px center; }
 @media (max-width: 600px) {
-  .jtabs { flex-wrap: nowrap; overflow-x: auto; width: 100%; scrollbar-width: none; }
+  .jtabs { flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; width: 100%; scrollbar-width: none; }
+  .jtabs::-webkit-scrollbar { display: none; }
+  .jtab { margin-bottom: 0; }
   .jtab { white-space: nowrap; }
   .job-filterbar { border-bottom: 0; }
   .jtabs { border-bottom: 1px solid var(--line); }
