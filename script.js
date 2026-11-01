@@ -113,6 +113,13 @@ document.querySelectorAll("form[data-formsubmit]").forEach((f) => {
   });
 });
 
+// Statistics: set a live number; a count-up already running picks up the new target
+function setStat(el, n) {
+  if (!el || !n) return;
+  el.dataset.target = n;
+  el.textContent = n;
+}
+
 // Home: newest three jobs from the job board
 const latestJobs = document.getElementById("latest-jobs");
 if (latestJobs) {
@@ -121,10 +128,9 @@ if (latestJobs) {
   fetch("jobs.json", { cache: "no-store" })
     .then((r) => r.json())
     .then((d) => {
+      setStat(document.getElementById("stat-roles"), (d.jobs || []).length);
       const jobs = (d.jobs || []).filter((j) => !j.closed).sort((a, b) => String(b.posted).localeCompare(String(a.posted))).slice(0, 3);
       if (!jobs.length) { document.getElementById("latest").hidden = true; return; }
-      const statRoles = document.getElementById("stat-roles");
-      if (statRoles) statRoles.textContent = (d.jobs || []).length;
       const companies = [...new Set((d.jobs || []).map((j) => j.company))];
       const strip = document.getElementById("latest-companies");
       if (strip && companies.length) {
@@ -157,7 +163,7 @@ const statRes = document.getElementById("stat-resources");
 if (statRes) {
   fetch("resources.html", { cache: "no-store" }).then((r) => r.text()).then((h) => {
     const n = (h.match(/class="res-row"/g) || []).length;
-    if (n) statRes.textContent = n;
+    setStat(statRes, n);
   }).catch(() => {});
 }
 
@@ -170,7 +176,7 @@ if (statNums.length && "IntersectionObserver" in window && !matchMedia("(prefers
     const end = +m[1], suffix = m[2], t0 = performance.now(), dur = 1200;
     const tick = (now) => {
       const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(end * eased) + suffix;
+      el.textContent = Math.round((+el.dataset.target || end) * eased) + suffix;
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
