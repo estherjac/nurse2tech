@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202611011900">
+  <link rel="stylesheet" href="styles.css?v=202611032052">
 </head>
 <body>
 
@@ -104,7 +104,15 @@
         <div class="section-head">
           <h2>Upcoming events</h2>
         </div>
+        <div class="job-filterbar" id="cost-filters" hidden>
+          <div class="jtabs" aria-label="Cost">
+            <button class="jtab active" data-cost="all">All</button>
+            <button class="jtab" data-cost="free">Free</button>
+            <button class="jtab" data-cost="paid">Paid</button>
+          </div>
+        </div>
         <div class="event-list" id="upcoming"></div>
+        <p class="ev-none" id="cost-none" hidden>No upcoming events match this filter right now.</p>
         <div class="job-empty" id="upcoming-empty" hidden>
           <svg><use href="#i-cal"/></svg>
           <h3>New events are being scheduled</h3>
@@ -222,7 +230,21 @@
           const all = data.events || [];
           const upcoming = all.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date));
           const past = all.filter((e) => e.date < today).sort((a, b) => b.date.localeCompare(a.date));
-          document.getElementById("upcoming").innerHTML = upcoming.map((e) => card(e, false)).join("");
+          // Free / Paid tabs: events with no cost listed only show under All
+          const isFree = (e) => /^free$/i.test(e.cost || "");
+          const isPaid = (e) => !!e.cost && !isFree(e);
+          const tabs = document.querySelectorAll("[data-cost]");
+          const show = (which) => {
+            const list = upcoming.filter((e) => which === "all" || (which === "free" ? isFree(e) : isPaid(e)));
+            document.getElementById("upcoming").innerHTML = list.map((e) => card(e, false)).join("");
+            document.getElementById("cost-none").hidden = list.length > 0 || upcoming.length === 0;
+          };
+          tabs.forEach((t) => t.addEventListener("click", () => {
+            tabs.forEach((x) => x.classList.toggle("active", x === t));
+            show(t.dataset.cost);
+          }));
+          document.getElementById("cost-filters").hidden = upcoming.length === 0;
+          show("all");
           document.getElementById("upcoming-empty").hidden = upcoming.length > 0;
           document.getElementById("past").innerHTML = past.map((e) => card(e, true)).join("");
           document.getElementById("past-wrap").hidden = past.length === 0;
