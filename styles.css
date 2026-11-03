@@ -616,6 +616,8 @@ main > .apply-hero ~ section:nth-of-type(2) { padding-top: 56px; }
 .job-filterbar { display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; flex-wrap: wrap; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
 .job-filterbar:not(:has(> :not([hidden]))), .job-filterbar[hidden] { display: none; }
 .ev-none { padding: 28px 0; color: var(--muted); }
+.ev-head-row { max-width: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.switch[hidden] { display: none; }
 .jtabs { display: flex; gap: 4px 26px; flex-wrap: wrap; }
 .jtabs[hidden], .jwhere[hidden] { display: none; }
 .jtab { background: none; border: 0; padding: 12px 0; margin-bottom: -1px; font: inherit; font-weight: 600; color: var(--muted); border-bottom: 2.5px solid transparent; cursor: pointer; transition: color .15s, border-color .15s; }
