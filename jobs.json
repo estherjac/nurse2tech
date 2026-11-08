@@ -21,8 +21,26 @@
       "posted": "2026-11-01",
       "description": "Support the implementation of digital sleep diagnostic technology, troubleshoot medical devices and software, and train healthcare professionals on the use of clinical monitoring systems. Looking for candidates with a clinical or scientific background, strong technical skills and good communication abilities; medical device or technical support experience is an advantage. Full-time, junior / entry-level."
     },
-    {"title":"Clinical Specialist","company":"Magenta Medical","location":"Israel","category":"implementation","url":"https://www.linkedin.com/jobs/view/4483867366/","posted":"2026-10-28","description":"Support the clinical use of advanced cardiac medical devices, assist healthcare professionals during procedures, and provide clinical training and support. Must have at least 4 years of clinical nursing experience in a hospital setting, hands-on experience as a Cath Lab Nurse or Cath Lab Technologist, and willingness and ability to travel extensively within Israel and internationally."},
-    {"title":"Sales & Therapy Specialist – TAVI (Structural Heart)","company":"Abbott","location":"Tel Aviv, Israel","category":"sales","url":"https://www.linkedin.com/jobs/view/4453157056/","posted":"2026-10-27","description":"Provide clinical support during cardiac procedures, train healthcare professionals on advanced structural heart devices, and support the adoption of medical technology in hospitals. Looking for strong communication skills and proficiency in Hebrew and English. Clinical experience, particularly in cardiology or cath labs, is an advantage, as is previous medical-device or pharmaceutical sales experience. Full-time, entry-level."},
+    {
+      "title": "Clinical Specialist",
+      "company": "Magenta Medical",
+      "location": "Israel",
+      "category": "implementation",
+      "url": "https://www.linkedin.com/jobs/view/4483867366/",
+      "posted": "2026-10-28",
+      "description": "Support the clinical use of advanced cardiac medical devices, assist healthcare professionals during procedures, and provide clinical training and support. Must have at least 4 years of clinical nursing experience in a hospital setting, hands-on experience as a Cath Lab Nurse or Cath Lab Technologist, and willingness and ability to travel extensively within Israel and internationally."
+    },
+    {
+      "title": "Sales & Therapy Specialist – TAVI (Structural Heart)",
+      "company": "Abbott",
+      "location": "Tel Aviv, Israel",
+      "category": "sales",
+      "url": "https://www.linkedin.com/jobs/view/4453157056/",
+      "posted": "2026-10-27",
+      "description": "Provide clinical support during cardiac procedures, train healthcare professionals on advanced structural heart devices, and support the adoption of medical technology in hospitals. Looking for strong communication skills and proficiency in Hebrew and English. Clinical experience, particularly in cardiology or cath labs, is an advantage, as is previous medical-device or pharmaceutical sales experience. Full-time, entry-level.",
+      "closed": true,
+      "closed_date": "2026-11-08"
+    },
     {
       "title": "Junior Patient Coordinator (Medical Navigator)",
       "company": "Breeoot",
@@ -31,7 +49,9 @@
       "category": "operations",
       "url": "https://www.linkedin.com/jobs/view/4483526917/",
       "posted": "2026-10-27",
-      "description": "Guide patients through their digital healthcare journey, coordinate preventive health assessments, and support personalized care plans using digital health tools. Looking for registered nurses with strong communication and organizational skills, an interest in digital health, and a willingness to learn. No previous tech experience required. Full-time, entry-level."
+      "description": "Guide patients through their digital healthcare journey, coordinate preventive health assessments, and support personalized care plans using digital health tools. Looking for registered nurses with strong communication and organizational skills, an interest in digital health, and a willingness to learn. No previous tech experience required. Full-time, entry-level.",
+      "closed": true,
+      "closed_date": "2026-11-08"
     },
     {
       "title": "Medical Imaging Annotator",
