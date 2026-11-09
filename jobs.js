@@ -46,6 +46,8 @@ const JOB_POST_ENDPOINT = "https://formsubmit.co/ajax/connect@nurse2tech.com";
             ${closed ? `<span class="tag tag-closed">No longer accepting applicants</span>` : isNew(j.posted) ? `<span class="tag tag-new">New</span>` : ""}
             <span class="tag">${esc(CATEGORY_LABELS[j.category] || j.category)}</span>
             ${j.work_setting ? `<span class="tag tag-paid">${esc(j.work_setting)}</span>` : ""}
+            ${j.part_time ? `<span class="tag tag-parttime">Part-time</span>` : ""}
+            ${j.entry_level ? `<span class="tag tag-entry">Entry-level</span>` : ""}
           </div>
           <h3>${esc(j.title)}</h3>
           <p class="job-co">${esc(j.company)} · <svg><use href="#i-pin"/></svg> ${esc(j.location)}</p>

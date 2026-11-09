@@ -832,3 +832,16 @@ h2 .accent, h2 .accent-light { color: inherit; }
   .footer-icons i { height: 36px; }
   .footer-brand .tagline { width: 100%; text-align: center; }
 }
+
+/* Spotlight: N2T Insights conversations */
+.insights-intro { margin-bottom: 28px; }
+.insight-card { background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 32px; max-width: 860px; display: grid; gap: 18px; }
+.insight-head { display: flex; align-items: baseline; gap: 12px; }
+.insight-num { font-weight: 800; color: var(--blue); font-size: 1.1rem; }
+.insight-head h3 { font-size: 1.35rem; }
+.insight-quote { margin: 0; font-size: 1.6rem; line-height: 1.3; font-weight: 800; color: var(--navy); }
+.insight-points { margin: 0; padding-left: 20px; display: grid; gap: 10px; color: var(--muted); }
+@media (max-width: 640px) { .insight-card { padding: 22px; } .insight-quote { font-size: 1.3rem; } }
+.a11y-he { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); text-align: right; }
+.tag-entry { background: #e5f6ec; color: #137a45; }
+.tag-parttime { background: #fff3e0; color: #8a4a00; }

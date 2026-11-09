@@ -1,5 +1,5 @@
 {
-  "_help": "Featured jobs shown on jobs.html. Add one object per job. category must be one of: informatics, product, ux, implementation, success, ai, sales, data, operations. work_setting: Remote, Hybrid or On-site. posted: YYYY-MM-DD. When a role stops accepting applicants, add closed: true — it moves to the greyed-out list. Add closed_date: YYYY-MM-DD — the day it stopped accepting applicants if known, otherwise the day you closed it here. Closed jobs show newest first.",
+  "_help": "Featured jobs shown on jobs.html. Add one object per job. category must be one of: informatics, product, ux, implementation, success, ai, sales, data, operations. work_setting: Remote, Hybrid or On-site. posted: YYYY-MM-DD. When a role stops accepting applicants, add closed: true — it moves to the greyed-out list. Add closed_date: YYYY-MM-DD — the day it stopped accepting applicants if known, otherwise the day you closed it here. Closed jobs show newest first. Add \"part_time\": true or \"entry_level\": true only when the job post says so; they show as small tags.",
   "_example": {
     "title": "Clinical Informatics Specialist",
     "company": "Example Health",
@@ -19,7 +19,8 @@
       "category": "ai",
       "url": "https://www.linkedin.com/jobs/view/4468642292/",
       "posted": "2026-11-08",
-      "description": "Review and annotate ultrasound images, validate clinical data, and support the development of AI-powered medical imaging technology. Looking for a clinical background in ultrasound or medical imaging, strong attention to detail and good English; experience in ultrasound interpretation or data annotation is an advantage. Part-time."
+      "description": "Review and annotate ultrasound images, validate clinical data, and support the development of AI-powered medical imaging technology. Looking for a clinical background in ultrasound or medical imaging, strong attention to detail and good English; experience in ultrasound interpretation or data annotation is an advantage. Part-time.",
+      "part_time": true
     },
     {
       "title": "Junior Clinical & Technical Support Specialist",
@@ -29,7 +30,8 @@
       "category": "implementation",
       "url": "https://www.linkedin.com/jobs/view/4484111399/",
       "posted": "2026-11-01",
-      "description": "Support the implementation of digital sleep diagnostic technology, troubleshoot medical devices and software, and train healthcare professionals on the use of clinical monitoring systems. Looking for candidates with a clinical or scientific background, strong technical skills and good communication abilities; medical device or technical support experience is an advantage. Full-time, junior / entry-level."
+      "description": "Support the implementation of digital sleep diagnostic technology, troubleshoot medical devices and software, and train healthcare professionals on the use of clinical monitoring systems. Looking for candidates with a clinical or scientific background, strong technical skills and good communication abilities; medical device or technical support experience is an advantage. Full-time, junior / entry-level.",
+      "entry_level": true
     },
     {
       "title": "Clinical Specialist",
@@ -49,7 +51,8 @@
       "posted": "2026-10-27",
       "description": "Provide clinical support during cardiac procedures, train healthcare professionals on advanced structural heart devices, and support the adoption of medical technology in hospitals. Looking for strong communication skills and proficiency in Hebrew and English. Clinical experience, particularly in cardiology or cath labs, is an advantage, as is previous medical-device or pharmaceutical sales experience. Full-time, entry-level.",
       "closed": true,
-      "closed_date": "2026-11-08"
+      "closed_date": "2026-11-08",
+      "entry_level": true
     },
     {
       "title": "Junior Patient Coordinator (Medical Navigator)",
@@ -61,7 +64,8 @@
       "posted": "2026-10-27",
       "description": "Guide patients through their digital healthcare journey, coordinate preventive health assessments, and support personalized care plans using digital health tools. Looking for registered nurses with strong communication and organizational skills, an interest in digital health, and a willingness to learn. No previous tech experience required. Full-time, entry-level.",
       "closed": true,
-      "closed_date": "2026-11-08"
+      "closed_date": "2026-11-08",
+      "entry_level": true
     },
     {
       "title": "Medical Imaging Annotator",
@@ -71,7 +75,8 @@
       "category": "ai",
       "url": "https://www.linkedin.com/jobs/view/4473748893/",
       "posted": "2026-10-15",
-      "description": "Review and label medical images, identify anatomical structures and support medical technology development. Looking for attention to detail and strong English and computer skills; a background in life sciences or medical imaging is an advantage. Full-time, entry-level."
+      "description": "Review and label medical images, identify anatomical structures and support medical technology development. Looking for attention to detail and strong English and computer skills; a background in life sciences or medical imaging is an advantage. Full-time, entry-level.",
+      "entry_level": true
     },
     {
       "title": "Clinical Specialist",
@@ -83,7 +88,8 @@
       "posted": "2026-10-10",
       "description": "Support healthcare professionals during medical procedures, give clinical training on medical devices, and help with product demonstrations and implementation. Looking for nurses with strong communication skills and an interest in medical technology; cardiology or medical device experience is an advantage. Full-time, entry-level.",
       "closed": true,
-      "closed_date": "2026-10-22"
+      "closed_date": "2026-10-22",
+      "entry_level": true
     },
     {
       "title": "Clinical AI Specialist",
