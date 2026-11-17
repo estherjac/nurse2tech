@@ -2,6 +2,13 @@
   "_help": "LinkedIn posts shown on spotlight.html under 'From our LinkedIn'. Newest first by date. type: Story, Conversation, Guide, Tips or Event.",
   "posts": [
     {
+      "title": "N2T Spotlight: Meet Elisheva",
+      "type": "Story",
+      "date": "2026-11-17",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528500204778643456/",
+      "summary": "From PICU nurse to the clinical team at MedINT, a medical AI startup, and how a scattered-feeling career path suddenly made sense."
+    },
+    {
       "title": "N2T Insights #1 | Getting Your Foot in the Door",
       "type": "Conversation",
       "date": "2026-10-22",
