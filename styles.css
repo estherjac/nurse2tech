@@ -760,6 +760,7 @@ h2 .accent, h2 .accent-light { color: inherit; }
 .section.about-mission { padding-top: 30px; }
 
 /* Spotlight & story */
+.footer-disclaimer { flex-basis: 100%; margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.5; }
 .spotlight { display: grid; grid-template-columns: 1.3fr .7fr; gap: 60px; align-items: center; }
 .spotlight blockquote { font-size: 1.35rem; font-weight: 700; line-height: 1.4; color: var(--navy); border-left: 3px solid var(--blue); padding-left: 20px; margin: 22px 0 6px; }
 .spotlight .card-link, .story .card-link { margin-top: 22px; }
