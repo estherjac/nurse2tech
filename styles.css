@@ -835,7 +835,7 @@ h2 .accent, h2 .accent-light { color: inherit; }
 }
 
 /* Spotlight: N2T Insights conversations */
-.insights-intro { margin-bottom: 28px; }
+.insights-section .section-sub, .spot-stories .section-sub { margin: 8px 0 28px; }
 .insight-card { background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 32px; max-width: 860px; display: grid; gap: 18px; }
 .insight-head { display: flex; align-items: baseline; gap: 12px; }
 .insight-num { font-weight: 800; color: var(--blue); font-size: 1.1rem; }
