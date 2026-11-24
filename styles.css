@@ -846,3 +846,8 @@ h2 .accent, h2 .accent-light { color: inherit; }
 .a11y-he { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); text-align: right; }
 .tag-entry { background: #e5f6ec; color: #137a45; }
 .tag-parttime { background: #fff3e0; color: #8a4a00; }
+.hero-jump { display: flex; gap: 10px; align-items: center; margin: -14px 0 0; font-weight: 700; font-size: .94rem; }
+.hero-jump a { color: var(--blue); }
+.hero-jump span { color: var(--muted); opacity: .6; }
+.insights-invite { margin: 24px 0 0; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+.insights-invite .card-link { margin-top: 0; }

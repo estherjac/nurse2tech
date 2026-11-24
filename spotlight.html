@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>N2T Spotlight — Nurse2Tech</title>
+  <title>Spotlight &amp; Insights — Nurse2Tech</title>
   <meta name="description" content="N2T Spotlight: stories from nurses who moved from the bedside into health tech.">
   <link rel="canonical" href="https://nurse2tech.com/spotlight.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nurse2Tech">
-  <meta property="og:title" content="N2T Spotlight — Nurse2Tech">
+  <meta property="og:title" content="Spotlight &amp; Insights — Nurse2Tech">
   <meta property="og:description" content="N2T Spotlight: stories from nurses who moved from the bedside into health tech.">
   <meta property="og:url" content="https://nurse2tech.com/spotlight.html">
   <meta property="og:image" content="https://nurse2tech.com/assets/og-image.png">
@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261124140000">
+  <link rel="stylesheet" href="styles.css?v=20261124150000">
 </head>
 <body>
 
@@ -81,7 +81,7 @@
         <nav class="eyebrow crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Spotlight</span></nav>
         <h1>Nurses in <span class="accent">health tech.</span></h1>
         <p class="lead">Real stories and advice to help you make the move.</p>
-        <a href="contact.html?topic=nominate" class="btn btn-ghost">Nominate a nurse</a>
+        <p class="hero-jump"><a href="#spotlight">Spotlight</a><span aria-hidden="true">·</span><a href="#insights">Insights</a></p>
       </div>
     </section>
 
@@ -182,16 +182,14 @@
             </div>
           </details>
         </article>
+        <p class="insights-invite">Built a career in health tech? We&rsquo;d love to talk. <a class="card-link" href="contact.html">Get in touch <svg class="ico-sm"><use href="#i-arrow"/></svg></a></p>
       </div>
     </section>
 
     <section class="section section-tint" id="posts">
       <div class="container">
         <div class="latest-head">
-          <div>
-            <p class="eyebrow">From our LinkedIn</p>
-            <h2>Conversations, stories and tips</h2>
-          </div>
+          <h2>More from our LinkedIn</h2>
           <a class="card-link" href="https://www.linkedin.com/company/nurse2tech/" target="_blank" rel="noopener">Follow Nurse2Tech <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
         </div>
         <div class="post-grid" id="post-grid"></div>
@@ -243,7 +241,8 @@
     if (location.hash) { const t = document.querySelector("details" + location.hash); if (t) t.open = true; }
     fetch("posts.json", { cache: "no-store" }).then((r) => r.json()).then((d) => {
       const esc = (x) => String(x ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-      const posts = (d.posts || []).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      const onPage = new Set([...document.querySelectorAll("main a[href*=\"linkedin.com/feed/update\"]")].map((a) => a.href));
+      const posts = (d.posts || []).filter((p) => !onPage.has(p.url)).sort((a, b) => String(b.date).localeCompare(String(a.date)));
       if (!posts.length) { document.getElementById("posts").hidden = true; return; }
       document.getElementById("post-grid").innerHTML = posts.map((p) => `
         <a class="post-card" href="${esc(p.url)}" target="_blank" rel="noopener">
